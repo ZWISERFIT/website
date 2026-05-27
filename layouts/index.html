@@ -1,0 +1,202 @@
+{{ define "main" }}
+<!-- ═══════════════════ HERO ═══════════════════ -->
+<section id="hero" class="hero">
+  <div class="container">
+    <h1 class="hero-title">{{ .Params.hero.title | default "ZWISERFIT" }}</h1>
+    <p class="hero-subtitle">{{ .Params.hero.subtitle | default "" }}</p>
+    <p class="hero-desc">{{ .Params.hero.desc | default "" }}</p>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num">1</span><span class="stat-label">验证节点</span></div>
+      <div class="stat"><span class="stat-num">7</span><span class="stat-label">年商业实证</span></div>
+      <div class="stat"><span class="stat-num">118</span><span class="stat-label">会员</span></div>
+      <div class="stat"><span class="stat-num">9</span><span class="stat-label">AI Agent</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ PROBLEM ═══════════════════ -->
+<section id="problem" class="section">
+  <div class="container">
+    <h2 class="section-title">问题</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>数据信任黑洞</h3>
+        <p>健康行为数据由平台单方持有，用户无法确权、无法审计、无法携带。数据价值被中心化平台垄断。</p>
+      </div>
+      <div class="card">
+        <h3>AI 与人类割裂</h3>
+        <p>现有方案要么追求"全自动无人化"抹除人类价值，要么完全依赖人工无法规模化。缺乏协同范式。</p>
+      </div>
+      <div class="card">
+        <h3>Agent 决策黑箱</h3>
+        <p>AI Agent 在实体商业中做出的决策，外部无法独立验证是否被篡改。可审计性缺失。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ SOLUTION ═══════════════════ -->
+<section id="solution" class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">方案</h2>
+    <div class="solution-core">
+      <p class="solution-tagline">ZWISERFIT = <strong>AI + 人类协同共生</strong>模式</p>
+      <div class="role-grid">
+        <div class="role">
+          <div class="role-icon">⚙️</div>
+          <h3>AI Agent</h3>
+          <p>标准化、流程化、数据驱动的硬核运营</p>
+          <ul>
+            <li>多模态传感器融合</li>
+            <li>行为数据采集与校准</li>
+            <li>链上存证与节点监控</li>
+            <li>自动化门店运维</li>
+          </ul>
+        </div>
+        <div class="role">
+          <div class="role-icon">🤝</div>
+          <h3>人类伙伴</h3>
+          <p>温度式、人文性、情感价值服务</p>
+          <ul>
+            <li>用户陪伴与人文关怀</li>
+            <li>线下氛围运营</li>
+            <li>高价值非标服务</li>
+            <li>社区活动策划</li>
+          </ul>
+        </div>
+        <div class="role">
+          <div class="role-icon">🔐</div>
+          <h3>用户</h3>
+          <p>拥有自己的数据</p>
+          <ul>
+            <li>DID 自主确权</li>
+            <li>MPC 隐私保护</li>
+            <li>链上存证可查</li>
+            <li>数据携带权</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ FOUNDER ═══════════════════ -->
+<section id="founder" class="section">
+  <div class="container">
+    <h2 class="section-title">创始人</h2>
+    <div class="founder-card">
+      <div class="founder-content">
+        {{ .Params.founder | default "" | markdownify }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ DATA ═══════════════════ -->
+<section id="data" class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">商业实证</h2>
+    <div class="data-grid">
+      <div class="data-card">
+        <span class="data-num">7年</span>
+        <span class="data-label">持续运营验证</span>
+      </div>
+      <div class="data-card">
+        <span class="data-num">118</span>
+        <span class="data-label">活跃会员</span>
+      </div>
+      <div class="data-card">
+        <span class="data-num">¥{{ .Params.data.revenue | default "—" }}</span>
+        <span class="data-label">累计营收</span>
+      </div>
+      <div class="data-card">
+        <span class="data-num">{{ .Params.data.breakeven_vc | default "—" }}</span>
+        <span class="data-label">盈亏平衡点 (VC全口径)</span>
+      </div>
+      <div class="data-card">
+        <span class="data-num">{{ .Params.data.breakeven_cash | default "—" }}</span>
+        <span class="data-label">盈亏平衡点 (纯现金口径)</span>
+      </div>
+    </div>
+    {{ with .Params.data_note }}<p class="data-note">{{ . }}</p>{{ end }}
+  </div>
+</section>
+
+<!-- ═══════════════════ TECH ═══════════════════ -->
+<section id="tech" class="section">
+  <div class="container">
+    <h2 class="section-title">技术架构</h2>
+    <div class="tech-content">
+      {{ .Params.tech | default "" | markdownify }}
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ TOKEN ═══════════════════ -->
+<section id="token" class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">Arcade Token</h2>
+    <div class="token-content">
+      {{ .Params.token | default "" | markdownify }}
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ FUNDRAISING ═══════════════════ -->
+<section id="fundraising" class="section">
+  <div class="container">
+    <h2 class="section-title">融资信息</h2>
+    <div class="fundraising-grid">
+      <div class="fundraising-card">
+        <h3>天使轮</h3>
+        <div class="fundraising-amount">$1M</div>
+        <p>技术拐点验证：AI Agent多节点运营 + 存证链完整性</p>
+      </div>
+      <div class="fundraising-card">
+        <h3>A轮</h3>
+        <div class="fundraising-amount">$3M</div>
+        <p>规模化复制：Agent网络扩展 + 人类伙伴生态系统</p>
+      </div>
+    </div>
+    <div class="fundraising-note">
+      {{ .Params.fundraising_note | default "" | markdownify }}
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ LINKS ═══════════════════ -->
+<section id="links" class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">链接</h2>
+    <div class="links-grid">
+      {{ with .Site.Params.social.github }}<a href="{{ . }}" class="link-card" target="_blank" rel="noopener">
+        <span class="link-icon">📂</span>
+        <span class="link-label">GitHub</span>
+      </a>{{ end }}
+      {{ with .Site.Params.social.twitter }}<a href="{{ . }}" class="link-card" target="_blank" rel="noopener">
+        <span class="link-icon">🐦</span>
+        <span class="link-label">Twitter/X</span>
+      </a>{{ end }}
+      {{ with .Site.Params.social.discord }}<a href="{{ . }}" class="link-card" target="_blank" rel="noopener">
+        <span class="link-icon">💬</span>
+        <span class="link-label">Discord</span>
+      </a>{{ end }}
+    </div>
+    <!-- VIDEO DEMO PLACEHOLDER -->
+    <div id="demo" class="demo-placeholder">
+      <h3>Demo 视频</h3>
+      <div class="demo-box">
+        <p>📹 视频即将上线</p>
+        <p class="demo-hint">创始团队拍摄中</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ FOOTER AUDIT ═══════════════════ -->
+<section class="audit-strip">
+  <div class="container">
+    <p>Stella 审计签名 · SHA-256 存证 · AI Agent 治理协议可审计执行层</p>
+  </div>
+</section>
+{{ end }}

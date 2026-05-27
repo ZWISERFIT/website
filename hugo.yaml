@@ -1,0 +1,47 @@
+baseURL: https://zwiserfit.cn/
+languageCode: zh-cn
+locale: zh-cn
+title: ZWISERFIT
+enableRobotsTXT: true
+minify:
+  minifyOutput: true
+  disableHTML: false
+  disableCSS: false
+  disableJS: false
+
+params:
+  description: ZWISERFIT — 全球实体商业AI基础设施。AI+人类协同共生模式。
+  author: ZWISERFIT Team
+  hero:
+    title: ZWISERFIT
+    subtitle: 全球实体商业AI基础设施
+  social:
+    github: https://github.com/ZWISERFIT
+    twitter: https://twitter.com/zwiserfit
+    discord: https://discord.gg/zwiserfit
+  data:
+    nodes: 1
+    years: 7
+    members: 118
+    agents: 9
+
+menu:
+  main:
+    - name: 介绍
+      url: "#hero"
+      weight: 1
+    - name: 方案
+      url: "#solution"
+      weight: 2
+    - name: 技术
+      url: "#tech"
+      weight: 3
+    - name: 数据
+      url: "#data"
+      weight: 4
+    - name: Token
+      url: "#token"
+      weight: 5
+    - name: 融资
+      url: "#fundraising"
+      weight: 6
