@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>省钱计算器 | LAO</title>
+<meta name="description" content="自己算一算：估算 LAO 的缓存感知路由每月能为你省下多少 LLM 账单。示意性估算，不是承诺。">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="icon" type="image/png" href="../../img/logo.png">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="brand"><img src="../../img/logo.png" alt="ZWISERFIT logo">ZWISERFIT</div>
+  <div class="links">
+    <a href="../">首页</a>
+    <a href="../download/">安装</a>
+    <a href="../market/">经验</a>
+    <a href="../demo/">计算器</a>
+    <a href="../evidence/">证据</a>
+    <a href="../about/">关于</a>
+    <a href="../for-agents/">给 Agent</a>
+    <a class="lang" href="../../demo/">EN</a>
+  </div>
+</nav>
+
+<header class="hero" style="padding:56px 24px 48px;">
+  <h1>自己<span class="dot">算一算。</span></h1>
+  <p class="sub">没有销售话术——输入你自己的数字，看估算结果。示意性计算，不是承诺；真实数字以官方对账为准。</p>
+</header>
+
+<section class="section">
+  <h2>计算器</h2>
+  <div class="rule"></div>
+  <div class="grid">
+    <div class="card">
+      <h3>你的输入</h3>
+      <label class="calc-label" for="spend">每月 LLM 支出（¥）</label>
+      <input class="calc-input" id="spend" type="number" min="0" step="100" value="5000">
+      <label class="calc-label" for="repeat">重复/相似任务的占比（%）</label>
+      <input class="calc-input" id="repeat" type="number" min="0" max="100" step="5" value="40">
+      <button class="btn red" style="margin-top:18px;" onclick="calc()">计算</button>
+    </div>
+    <div class="card">
+      <h3>估算结果</h3>
+      <p class="calc-out" id="out">—</p>
+      <p style="font-size:13px;color:var(--muted);">公式（示意）：每月节省 ≈ 支出 × 重复占比 × 0.55，其中 0.55 是缓存感知路由对重复请求典型降本幅度的示意系数——<b>将以实测并对账后的数字替换</b>。重推理类任务从缓存中获益有限；实际节省随任务形态而变。</p>
+    </div>
+  </div>
+  <p class="lead" style="margin-top:18px;">为什么重复任务省得最多：缓存未命中的请求只占量的一小部分，却吃掉成本的大头——LAO 正好堵的就是这个洞。<span class="measured-badge">实测 · 待官方对账</span></p>
+</section>
+
+<section class="section">
+  <h2>然后去验证它</h2>
+  <div class="rule"></div>
+  <p class="lead">诚实的做法：装上 LAO，跑你真实的工作负载一周，对照厂商官方计费控制台。那是唯一我们请你相信的数字。</p>
+  <p><a class="btn" href="../download/">安装 LAO →</a></p>
+</section>
+
+<div class="footer">
+  <p><b>ZWISERFIT</b> · LAO · 成本是最可度量的价值交换</p>
+  <p style="margin-top:8px;"><a href="../privacy/">隐私</a> · <a href="../">首页</a> · © 2026 ZWISERFIT · Apache 2.0</p>
+</div>
+
+<script>
+function calc(){
+  var spend = parseFloat(document.getElementById('spend').value) || 0;
+  var repeat = Math.min(100, Math.max(0, parseFloat(document.getElementById('repeat').value) || 0));
+  var saving = spend * (repeat/100) * 0.55;
+  var yearly = saving * 12;
+  document.getElementById('out').innerHTML =
+    '≈ 每月省 ¥ ' + Math.round(saving).toLocaleString() + '<br>' +
+    '≈ 每年省 ¥ ' + Math.round(yearly).toLocaleString() + '<br>' +
+    '<span style="font-size:13px;color:var(--muted);">示意性估算 · 待官方对账</span>';
+}
+</script>
+
+</body>
+</html>

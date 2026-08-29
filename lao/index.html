@@ -6,59 +6,59 @@
 <title>LAO Product Docs — How it saves your tokens</title>
 <meta name="description" content="How LAO works: per-task model selection, cache-aware request optimization, intent lock, experience-anchored answers, and behavioral memory.">
 <link rel="stylesheet" href="../css/site.css">
+<link rel="icon" type="image/png" href="../img/logo.png">
 </head>
 <body>
 
 <nav class="nav">
-  <div class="brand"><span class="dot"></span>LAO</div>
+  <div class="brand"><img src="../img/logo.png" alt="ZWISERFIT logo">ZWISERFIT</div>
   <div class="links">
     <a href="../">Home</a>
     <a href="../download/">Install</a>
     <a href="../market/">Experience</a>
     <a href="../demo/">Calculator</a>
     <a href="../evidence/">Evidence</a>
-    <a href="../roadmap/">Roadmap</a>
     <a href="../about/">About</a>
     <a href="../for-agents/">For Agents</a>
+    <a class="lang" href="../zh/lao/">中文</a>
   </div>
 </nav>
 
 <header class="hero" style="padding:56px 24px 48px;">
   <h1>How LAO saves your <span class="dot">tokens</span></h1>
   <p class="sub">LAO — Lineage Anchored Ontology. An independent component between your LLM and your Runtime. The LLM stays smart; LAO keeps it honest — and cheap.</p>
-  <p class="sub zh">LAO是坐在你的LLM与Runtime之间的独立组件。LLM负责聪明，LAO负责可靠——还帮你省钱。</p>
 </header>
 
 <section class="section">
-  <h2>The three layers <span class="zh-inline">三层工作</span></h2>
+  <h2>The three layers</h2>
   <div class="rule"></div>
   <div class="pipeline">
     <div class="pl-stage l1">
-      <div class="h"><span class="badge">L1</span><h3>Model selection · best value per task 模型选品</h3></div>
+      <div class="h"><span class="badge">L1</span><h3>Model selection · best value per task</h3></div>
       <div class="items">
-        <span class="item">Safety first: unfit models excluded 安全过滤</span>
-        <span class="item">Then speed 效率过滤</span>
-        <span class="item">Then cost 成本过滤</span>
-        <span class="item">Cache-aware request optimization 缓存感知请求优化</span>
+        <span class="item">Safety first: unfit models excluded</span>
+        <span class="item">Then speed</span>
+        <span class="item">Then cost</span>
+        <span class="item">Cache-aware request optimization</span>
       </div>
       <div class="out"><b>Output:</b> the right model, the right price, for this task.</div>
     </div>
     <div class="pl-stage l2">
-      <div class="h"><span class="badge">L2</span><h3>Experience pipeline · your memory 经验沉淀</h3></div>
+      <div class="h"><span class="badge">L2</span><h3>Experience pipeline · your memory</h3></div>
       <div class="items">
-        <span class="item">Experience settles in as you work 实时沉淀</span>
-        <span class="item">Mistakes become permanent constraints 错误变约束</span>
-        <span class="item">Context pruned to key anchors 上下文剪枝</span>
-        <span class="item">Every step asks permission 每步都征求同意</span>
+        <span class="item">Experience settles in as you work</span>
+        <span class="item">Mistakes become permanent constraints</span>
+        <span class="item">Context pruned to key anchors</span>
+        <span class="item">Every step asks permission</span>
       </div>
       <div class="out"><b>Output:</b> structured, reusable experience — always yours.</div>
     </div>
     <div class="pl-stage l3">
-      <div class="h"><span class="badge">L3</span><h3>Answer calibration · never bluff 回答校准</h3></div>
+      <div class="h"><span class="badge">L3</span><h3>Answer calibration · never bluff</h3></div>
       <div class="items">
-        <span class="item">Intent lock: your meaning never altered 意图锁定</span>
-        <span class="item">Answers calibrated against your facts 经验锚定</span>
-        <span class="item">Calibration fails → honest fallback to raw answer 诚实回退</span>
+        <span class="item">Intent lock: your meaning never altered</span>
+        <span class="item">Answers calibrated against your facts</span>
+        <span class="item">Calibration fails → honest fallback to raw answer</span>
       </div>
       <div class="out"><b>Output:</b> "maybe right" becomes "right against your experience".</div>
     </div>
@@ -66,19 +66,17 @@
 </section>
 
 <section class="section">
-  <h2>Open-source boundary <span class="zh-inline">开源边界</span></h2>
+  <h2>Open-source boundary</h2>
   <div class="rule"></div>
   <table>
     <tr><th>Module</th><th>License</th><th>Note</th></tr>
-    <tr><td>Routing &amp; model selection</td><td>Apache 2.0 ✅</td><td>Fully public 完全公开</td></tr>
-    <tr><td>Calibration &amp; memory components</td><td>Apache 2.0 ✅</td><td>Core layer, no LLM dependency 核心层·不依赖LLM</td></tr>
-    <tr><td>Production tuning ratios</td><td>🔒 Reserved</td><td>Kept by the maintainer 配比保留</td></tr>
+    <tr><td>Routing &amp; model selection</td><td>Apache 2.0 ✅</td><td>Fully public</td></tr>
+    <tr><td>Calibration &amp; memory components</td><td>Apache 2.0 ✅</td><td>Core layer, no LLM dependency</td></tr>
   </table>
-  <p class="zh" style="margin-top:14px;">配方（代码）全公开，配比（调优参数）保留。经验市场后续开张以正式施工为准，现阶段仅展示。</p>
 </section>
 
 <div class="footer">
-  <p><b>LAO</b> · the LLM stays smart; LAO keeps it honest</p>
+  <p><b>ZWISERFIT</b> · LAO · the LLM stays smart; LAO keeps it honest</p>
   <p style="margin-top:8px;"><a href="../privacy/">Privacy</a> · <a href="../download/">Install</a> · <a href="../">Home</a> · © 2026 ZWISERFIT · Apache 2.0</p>
 </div>
 

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>安装 LAO — 免费 &amp; 开源（Apache 2.0）</title>
+<meta name="description" content="安装 LAO：免费、开源（Apache 2.0）。自带你的 key。GitHub 入口、安装命令与快速上手。">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="icon" type="image/png" href="../../img/logo.png">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="brand"><img src="../../img/logo.png" alt="ZWISERFIT logo">ZWISERFIT</div>
+  <div class="links">
+    <a href="../">首页</a>
+    <a href="../download/">安装</a>
+    <a href="../market/">经验</a>
+    <a href="../demo/">计算器</a>
+    <a href="../evidence/">证据</a>
+    <a href="../about/">关于</a>
+    <a href="../for-agents/">给 Agent</a>
+    <a class="lang" href="../../download/">EN</a>
+  </div>
+</nav>
+
+<header class="hero" style="padding:56px 24px 48px;">
+  <h1>获取 LAO — <span class="dot">免费</span> &amp; 开源</h1>
+  <p class="sub">没有付费档位。没有注册。没有付款。Apache 2.0 开源——用你自己的 key 运行。</p>
+</header>
+
+<section class="section">
+  <h2>安装</h2>
+  <div class="rule"></div>
+  <div class="code-block">
+<span class="cm"># Python 3.9+</span>
+pip install lao-human-calibration
+  </div>
+  <p class="lead">或者从源码安装：</p>
+  <div class="code-block">
+git clone https://github.com/ZWISERFIT/lao.git
+cd lao && pip install .
+  </div>
+  <p><a class="btn" href="https://github.com/ZWISERFIT/lao" target="_blank" rel="noopener">GitHub: ZWISERFIT/lao →</a></p>
+</section>
+
+<section class="section">
+  <h2>快速上手</h2>
+  <div class="rule"></div>
+  <div class="code-block">
+<span class="cm"># 自带你的模型 API key — LAO 自身零 LLM 调用</span>
+from lao.human_calibration import HumanCalibration
+
+cal = HumanCalibration(owner="you")
+cal.ingest(task="...", result="...")   <span class="cm"># 经验沉淀</span>
+best = cal.retrieve(query="...")       <span class="cm"># 回答锚定在你的经验上</span>
+  </div>
+  <p class="lead">组件自身零 LLM 调用：你用自己的 key 部署它，我们永远不在你的 token 里抽成。</p>
+</section>
+
+<section class="section">
+  <h2>你会得到什么，直说</h2>
+  <div class="rule"></div>
+  <div class="grid">
+    <div class="card">
+      <h3>✅ 开源 — Apache 2.0</h3>
+      <p>全部代码公开：路由、校准、记忆链。读它，审计它，fork 它。</p>
+    </div>
+    <div class="card">
+      <h3>🕵️ 遥测 — 没有</h3>
+      <p>当前版本不向任何地方发送任何数据。历史如实披露。<a href="../privacy/">隐私页 →</a></p>
+    </div>
+    <div class="card">
+      <h3>🔑 你的 key，你的数据</h3>
+      <p>自带你的模型 API key。无锁定——你随时可以离开。</p>
+    </div>
+  </div>
+</section>
+
+<div class="footer">
+  <p><b>ZWISERFIT</b> · LAO · 开源 · 免费 · 只站在你这一边</p>
+  <p style="margin-top:8px;"><a href="../privacy/">隐私</a> · <a href="../">首页</a> · © 2026 ZWISERFIT · Apache 2.0</p>
+</div>
+
+</body>
+</html>

@@ -6,60 +6,59 @@
 <title>Cost-saving Calculator | LAO</title>
 <meta name="description" content="Do the math yourself: estimate how much LAO's cache-aware routing can save on your monthly LLM bill. Illustrative estimate, not a promise.">
 <link rel="stylesheet" href="../css/site.css">
+<link rel="icon" type="image/png" href="../img/logo.png">
 </head>
 <body>
 
 <nav class="nav">
-  <div class="brand"><span class="dot"></span>LAO</div>
+  <div class="brand"><img src="../img/logo.png" alt="ZWISERFIT logo">ZWISERFIT</div>
   <div class="links">
     <a href="../">Home</a>
     <a href="../download/">Install</a>
     <a href="../market/">Experience</a>
     <a href="../demo/">Calculator</a>
     <a href="../evidence/">Evidence</a>
-    <a href="../roadmap/">Roadmap</a>
     <a href="../about/">About</a>
     <a href="../for-agents/">For Agents</a>
+    <a class="lang" href="../zh/demo/">中文</a>
   </div>
 </nav>
 
 <header class="hero" style="padding:56px 24px 48px;">
   <h1>Do the math <span class="dot">yourself.</span></h1>
   <p class="sub">No sales pitch — enter your own numbers and see the estimate. Illustrative calculation, not a promise; real figures stand on official reconciliation.</p>
-  <p class="sub zh">自己算：填你自己的数字，看推算结果。示意推算，非承诺；真实数字以官方对账为准。</p>
 </header>
 
 <section class="section">
-  <h2>Calculator <span class="zh-inline">降本计算器</span></h2>
+  <h2>Calculator</h2>
   <div class="rule"></div>
   <div class="grid">
     <div class="card">
-      <h3>Your inputs <span class="zh-inline">你的输入</span></h3>
-      <label class="calc-label" for="spend">Monthly LLM spend (¥) · 每月LLM花费</label>
+      <h3>Your inputs</h3>
+      <label class="calc-label" for="spend">Monthly LLM spend (¥)</label>
       <input class="calc-input" id="spend" type="number" min="0" step="100" value="5000">
-      <label class="calc-label" for="repeat">Share of repetitive/similar tasks (%) · 重复性任务占比</label>
+      <label class="calc-label" for="repeat">Share of repetitive/similar tasks (%)</label>
       <input class="calc-input" id="repeat" type="number" min="0" max="100" step="5" value="40">
-      <button class="btn red" style="margin-top:18px;" onclick="calc()">Calculate · 算一算</button>
+      <button class="btn red" style="margin-top:18px;" onclick="calc()">Calculate</button>
     </div>
     <div class="card">
-      <h3>Estimate <span class="zh-inline">推算结果</span></h3>
+      <h3>Estimate</h3>
       <p class="calc-out" id="out">—</p>
-      <p class="zh" style="font-size:13px;color:var(--muted);">公式（示意）：月省 ≈ 月花费 × 重复占比 × 0.55。其中 0.55 为示意系数，代表"缓存感知路由对重复性请求的典型降本幅度"，<b>待官方对账后替换为实测数</b>。 heavy-reasoning 类任务不适用缓存收益，实际收益因负载结构而异。</p>
+      <p style="font-size:13px;color:var(--muted);">Formula (illustrative): monthly saving ≈ spend × repeat share × 0.55, where 0.55 is an illustrative factor for the typical cost reduction of cache-aware routing on repetitive requests — <b>to be replaced by measured, reconciled numbers</b>. Heavy-reasoning workloads gain little from caching; actual savings vary with workload shape.</p>
     </div>
   </div>
-  <p class="zh" style="margin-top:18px;">为什么重复性任务最省：缓存未命中的请求虽然只占少数，却吃掉了成本的大头——LAO 专门堵住这个洞。【占比与成本数字为实测口径，上线前逐条官方对账】</p>
+  <p class="lead" style="margin-top:18px;">Why repetitive tasks save the most: cache-miss requests are a small share of volume but eat most of the cost — LAO plugs exactly that hole. <span class="measured-badge">measured · pending official reconciliation</span></p>
 </section>
 
 <section class="section">
-  <h2>Then verify it <span class="zh-inline">算完，去验证</span></h2>
+  <h2>Then verify it</h2>
   <div class="rule"></div>
   <p class="lead">The honest way: install LAO, run your real workload for a week, and compare against your provider's official billing console. That's the only number we'd ask you to trust.</p>
-  <p class="zh">最诚实的方式：装上LAO，跑一周真实负载，拿服务商官方后台的账单对比。我们只请你信这个数。</p>
   <p><a class="btn" href="../download/">Install LAO →</a></p>
 </section>
 
 <div class="footer">
-  <p><b>LAO</b> · cost is the most measurable value exchange</p>
+  <p><b>ZWISERFIT</b> · LAO · cost is the most measurable value exchange</p>
   <p style="margin-top:8px;"><a href="../privacy/">Privacy</a> · <a href="../">Home</a> · © 2026 ZWISERFIT · Apache 2.0</p>
 </div>
 
@@ -72,7 +71,7 @@ function calc(){
   document.getElementById('out').innerHTML =
     '≈ ¥ ' + Math.round(saving).toLocaleString() + ' / month saved<br>' +
     '≈ ¥ ' + Math.round(yearly).toLocaleString() + ' / year<br>' +
-    '<span style="font-size:13px;color:var(--muted);">illustrative estimate · pending official reconciliation 示意推算·待官方对账</span>';
+    '<span style="font-size:13px;color:var(--muted);">illustrative estimate · pending official reconciliation</span>';
 }
 </script>
 

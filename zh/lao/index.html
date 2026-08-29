@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LAO 产品文档 — 它如何省下你的 token</title>
+<meta name="description" content="LAO 的工作原理：按任务选模型、缓存感知的请求优化、意图锁、经验锚定的回答、行为记忆。">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="icon" type="image/png" href="../../img/logo.png">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="brand"><img src="../../img/logo.png" alt="ZWISERFIT logo">ZWISERFIT</div>
+  <div class="links">
+    <a href="../">首页</a>
+    <a href="../download/">安装</a>
+    <a href="../market/">经验</a>
+    <a href="../demo/">计算器</a>
+    <a href="../evidence/">证据</a>
+    <a href="../about/">关于</a>
+    <a href="../for-agents/">给 Agent</a>
+    <a class="lang" href="../../lao/">EN</a>
+  </div>
+</nav>
+
+<header class="hero" style="padding:56px 24px 48px;">
+  <h1>LAO 如何省下你的 <span class="dot">token</span></h1>
+  <p class="sub">LAO — Lineage Anchored Ontology。位于你的 LLM 与 Runtime 之间的独立组件。LLM 保持聪明；LAO 让它诚实——并且便宜。</p>
+</header>
+
+<section class="section">
+  <h2>三层结构</h2>
+  <div class="rule"></div>
+  <div class="pipeline">
+    <div class="pl-stage l1">
+      <div class="h"><span class="badge">L1</span><h3>模型选择 · 每个任务的最优价值</h3></div>
+      <div class="items">
+        <span class="item">安全优先：不合适的模型先排除</span>
+        <span class="item">再看速度</span>
+        <span class="item">再看成本</span>
+        <span class="item">缓存感知的请求优化</span>
+      </div>
+      <div class="out"><b>输出：</b>这个任务，对的模型，对的价格。</div>
+    </div>
+    <div class="pl-stage l2">
+      <div class="h"><span class="badge">L2</span><h3>经验流水线 · 你的记忆</h3></div>
+      <div class="items">
+        <span class="item">经验在你工作时沉淀</span>
+        <span class="item">错误变成永久约束</span>
+        <span class="item">上下文修剪到关键锚点</span>
+        <span class="item">每一步都征得许可</span>
+      </div>
+      <div class="out"><b>输出：</b>结构化、可复用的经验——永远属于你。</div>
+    </div>
+    <div class="pl-stage l3">
+      <div class="h"><span class="badge">L3</span><h3>回答校准 · 绝不虚张声势</h3></div>
+      <div class="items">
+        <span class="item">意图锁：你的本意永不被改变</span>
+        <span class="item">回答用你的事实校准</span>
+        <span class="item">校准失败 → 如实回退到原始回答</span>
+      </div>
+      <div class="out"><b>输出：</b>"可能对"变成"对着你的经验而言是对的"。</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>开源边界</h2>
+  <div class="rule"></div>
+  <table>
+    <tr><th>模块</th><th>许可证</th><th>说明</th></tr>
+    <tr><td>路由与模型选择</td><td>Apache 2.0 ✅</td><td>完全公开</td></tr>
+    <tr><td>校准与记忆组件</td><td>Apache 2.0 ✅</td><td>核心层，不依赖 LLM</td></tr>
+  </table>
+</section>
+
+<div class="footer">
+  <p><b>ZWISERFIT</b> · LAO · LLM 保持聪明；LAO 让它诚实</p>
+  <p style="margin-top:8px;"><a href="../privacy/">隐私</a> · <a href="../download/">安装</a> · <a href="../">首页</a> · © 2026 ZWISERFIT · Apache 2.0</p>
+</div>
+
+</body>
+</html>

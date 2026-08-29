@@ -1,10 +1,10 @@
 /* ZWISERFIT 官网 · 全局样式
-   主题: 第一阶段·只说省钱（48号图纸）
-   品牌色: 深蓝 #002B5C + 红 #FF0000（原logo色系保留·08-08裁定） */
+   品牌色: 深蓝 #002B5C + 低饱和砖红 #B04A3F（2026-08-29 创始人实测反馈③：红色降饱和、红蓝调和；原logo色系基调保留） */
 :root {
   --navy: #002B5C;
   --navy-2: #0a3d73;
-  --red: #FF0000;
+  --red: #B04A3F;
+  --red-dark: #96392F;
   --ink: #1a2233;
   --bg: #f7f9fc;
   --card: #ffffff;
@@ -30,8 +30,10 @@ a:hover { text-decoration: underline; }
   display:flex; align-items:center; justify-content:space-between;
   box-shadow:0 2px 8px rgba(0,20,50,.15);
 }
-.nav .brand { display:flex; align-items:center; gap:10px; font-weight:800; font-size:19px; letter-spacing:.5px; }
-.nav .brand .dot { width:12px; height:12px; background:var(--red); border-radius:50%; display:inline-block; }
+.nav .brand { display:flex; align-items:center; gap:10px; font-weight:800; font-size:18px; letter-spacing:.8px; }
+.nav .brand img { height:32px; width:auto; border-radius:6px; background:#fff; padding:2px; }
+.nav .lang { color:#ffd9d4; margin-left:18px; font-size:13px; font-weight:600; border:1px solid #4a6da0; border-radius:14px; padding:2px 12px; }
+.nav .lang:hover { color:#fff; border-color:#8fb0dc; text-decoration:none; }
 .nav .links a { color:#dfe8f5; margin-left:22px; font-size:14.5px; font-weight:500; }
 .nav .links a:hover { color:#fff; text-decoration:none; }
 
@@ -111,6 +113,7 @@ a.card.door:hover { text-decoration:none; border-color:var(--navy-2); }
   border:none; cursor:pointer; font-size:15px;
 }
 .btn.red { background:var(--red); }
+.btn.red:hover { background:var(--red-dark); }
 .btn:hover { opacity:.92; }
 
 /* code块 */
@@ -146,11 +149,8 @@ th { background:#f1f5fb; color:var(--navy); font-weight:600; }
 .status.traded { background:#fdeaea; color:var(--red); }
 .status.live { background:#fff5dc; color:#b8860b; }
 
-/* 中文辅助样式 */
-.zh { color:var(--muted); font-size:14px; }
-.hero .zh, .hero .zh-inline { color:#9fb8d8; }
-.zh-inline { font-size:.72em; color:var(--muted); font-weight:400; }
-h2 .zh-inline { color:#8a97a8; }
+/* 语言版式：英文根版与 /zh/ 中文版各自独立，页面内不混排（2026-08-29 创始人实测反馈②） */
+body.lang-zh { letter-spacing:.02em; }
 
 @media (max-width:680px){
   .hero h1 { font-size:32px; }

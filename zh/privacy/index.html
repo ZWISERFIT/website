@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>隐私 — 无遥测 | LAO</title>
+<meta name="description" content="LAO 当前版本不进行任何遥测。历史遥测如实披露。本页与开源仓库中的 PRIVACY.md 保持一致。">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="icon" type="image/png" href="../../img/logo.png">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="brand"><img src="../../img/logo.png" alt="ZWISERFIT logo">ZWISERFIT</div>
+  <div class="links">
+    <a href="../">首页</a>
+    <a href="../download/">安装</a>
+    <a href="../market/">经验</a>
+    <a href="../demo/">计算器</a>
+    <a href="../evidence/">证据</a>
+    <a href="../about/">关于</a>
+    <a href="../for-agents/">给 Agent</a>
+    <a class="lang" href="../../privacy/">EN</a>
+  </div>
+</nav>
+
+<header class="hero" style="padding:56px 24px 48px;">
+  <h1>隐私：<span class="dot">无遥测。</span></h1>
+  <p class="sub">当前版本（v3.6.0-r3）不向任何地方发送任何数据。历史如下，如实讲述。本页与开源仓库中的 <code>PRIVACY.md</code> 保持一致——以该文件为准。</p>
+</header>
+
+<section class="section">
+  <h2>当前版本</h2>
+  <div class="rule"></div>
+  <p class="lead">导入或运行本仓库的代码，不会向任何外部服务器发送版本号、心跳或使用数据。没有任何默认开启的回传网络调用。</p>
+</section>
+
+<section class="section">
+  <h2>历史披露（如实）</h2>
+  <div class="rule"></div>
+  <p class="lead">从 commit <code>0efd980</code>（2026-08-10）到 v3.6.0-r2，曾存在一个默认开启的版本遥测：导入时，一个后台线程会将版本号和本地生成的匿名 ID 发送到 <code>https://effect-anchored-telemetry.zwiserfit.cn/ping</code>（可通过 <code>EFFECT_ANCHORED_TELEMETRY=0</code> 关闭）。</p>
+  <p class="lead">关于那段时期的三个已验证事实：</p>
+  <ul class="facts">
+    <li><b>该域名从未解析成功（NXDOMAIN）</b>——端点不可达；<b>从未收集到任何遥测数据</b>。</li>
+    <li>该遥测可能在用户主目录创建过 <code>~/.effect_anchored_anon_id</code>（一个 UUID v4）。</li>
+    <li>自 v3.6.0-r3 起，这段代码已被完整移除。</li>
+  </ul>
+  <div class="code-block">
+<span class="cm"># 检查是否有遗留的匿名 ID 文件</span>
+ls ~/.effect_anchored_anon_id
+<span class="cm"># 如存在则删除</span>
+rm ~/.effect_anchored_anon_id
+  </div>
+</section>
+
+<section class="section">
+  <h2>未来版本</h2>
+  <div class="rule"></div>
+  <p class="lead">任何安装/使用统计，如果未来引入，必须：默认关闭、首次运行时明确询问、字段白名单、随时可撤销——并事先在 <code>PRIVACY.md</code> 中声明。</p>
+</section>
+
+<div class="footer">
+  <p>最近与 PRIVACY.md 对齐：2026-08-26 · v3.6.0-r3</p>
+  <p style="margin-top:8px;"><a href="../">首页</a> · © 2026 ZWISERFIT · Apache 2.0</p>
+</div>
+
+</body>
+</html>

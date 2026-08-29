@@ -4,120 +4,135 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LAO — the independent third party between your LLM and your Runtime</title>
-<meta name="description" content="LAO is ZWISERFIT's first product — open source. An independent third party that sits between your LLM and your Runtime, on the user's side: it cuts wasted tokens and anchors answers to your experience. Free. No telemetry.">
+<meta name="description" content="LAO is ZWISERFIT's first open-source product. An independent third party that sits between your LLM and your Runtime, on the user's side: it cuts wasted tokens and anchors answers to your experience. Free. No telemetry.">
 <link rel="stylesheet" href="./css/site.css">
-<link rel="icon" type="image/svg+xml" href="./img/favicon.svg">
+<link rel="icon" type="image/png" href="./img/logo.png">
 </head>
 <body>
 
 <nav class="nav">
-  <div class="brand"><span class="dot"></span>LAO</div>
+  <div class="brand"><img src="./img/logo.png" alt="ZWISERFIT logo">ZWISERFIT</div>
   <div class="links">
     <a href="./">Home</a>
     <a href="./download/">Install</a>
     <a href="./market/">Experience</a>
     <a href="./demo/">Calculator</a>
     <a href="./evidence/">Evidence</a>
-    <a href="./roadmap/">Roadmap</a>
     <a href="./about/">About</a>
     <a href="./for-agents/">For Agents</a>
+    <a class="lang" href="./zh/">中文</a>
   </div>
 </nav>
 
-<!-- 首屏：一句话讲清我们是什么（Mihir 定位药方：不许让访客猜） -->
+<!-- First view: one sentence about what we are -->
 <header class="hero">
   <h1>LAO — the independent third party between your <span class="dot">LLM</span> and your <span class="dot">Runtime</span></h1>
-  <p class="sub">LAO is ZWISERFIT's first product, open source. It sits between your LLM and your Runtime, aligned with your interests, only on your side: it picks the right model for every task, cuts wasted tokens, and anchors answers to your experience.</p>
-  <p class="sub zh">LAO 是 ZWISERFIT 的第一个产品，开源。它坐在你的 LLM 与 Runtime 之间，与你的利益一致，只站在你这一边：替你选对模型、堵住浪费的 token、把回答锚定在你的经验上。</p>
-  <p class="sub">Who watches the LLM and Runtime, so they stop burning your tokens? You need a trusted, independent third party. That's LAO.</p>
-  <p class="sub zh">谁来替你监督 LLM 和 Runtime，别让它们乱花你的 token？你需要一个可信的独立第三方——LAO 就是这个角色。</p>
+  <p class="sub">LAO is ZWISERFIT's first open-source product. It sits between your LLM and your Runtime, aligned with your interests, only on your side: it picks the right model for every task, cuts wasted tokens, and anchors answers to your experience.</p>
+  <p class="sub">Who watches the LLM and Runtime, so they stop burning your tokens? You need a trusted, independent third party — one whose interests are the same as yours. That's LAO.</p>
   <p style="margin-top:22px;">
     <a class="btn red" href="./download/">Get LAO — free &amp; open source</a>
     <a class="btn" style="margin-left:10px;" href="./for-agents/">For Agents →</a>
   </p>
-  <p class="tag" style="margin-top:18px;">Apache 2.0 · The recipe is public. No telemetry. No lock-in. <span class="zh-inline">配方公开 · 无遥测 · 无锁定</span></p>
+  <p class="tag" style="margin-top:18px;">Apache 2.0 · Open source · No telemetry · No lock-in</p>
 </header>
 
-<!-- 双门（48号优化②：人类门＋agent门并列） -->
+<!-- Two doors -->
 <section class="section">
-  <h2>Two doors. Pick yours. <span class="zh-inline">两扇门，各走各的。</span></h2>
+  <h2>Two doors. Pick yours.</h2>
   <div class="rule"></div>
   <div class="grid doors">
     <a class="card door" href="./download/">
-      <h3>🚪 Human door <span class="zh-inline">人类门</span></h3>
-      <p>Cut your LLM bill with real, measured numbers — and see the receipts. 用真实省钱实证说话。</p>
+      <h3>🚪 Human door</h3>
+      <p>Cut your LLM bill with real, measured numbers — and see the receipts.</p>
       <span class="cta">Enter →</span>
     </a>
     <a class="card door" href="./for-agents/">
-      <h3>🤖 Agent door <span class="zh-inline">agent门</span></h3>
+      <h3>🤖 Agent door</h3>
       <p>Machine-readable: what LAO is, how to install it, what the interface looks like. Built for agents to discover and choose LAO on their own.</p>
       <span class="cta">Enter →</span>
     </a>
   </div>
 </section>
 
-<!-- 第二屏：三大卖点（你的问题 → 我们怎么解决 · Karan 视角） -->
+<!-- Your problem → what LAO does -->
 <section class="section">
-  <h2>Your problem → what LAO does. <span class="zh-inline">你的问题 → 我们怎么解决。</span></h2>
+  <h2>Your problem → what LAO does.</h2>
   <div class="rule"></div>
   <div class="grid">
     <div class="card">
-      <h3>① Save money <span class="zh-inline">省钱</span></h3>
+      <h3>① Save money</h3>
       <p><b>Your problem:</b> cache-miss requests are a small share of your tokens — but they eat most of your bill.</p>
-      <p><b>What LAO does:</b> model selection + per-task matching + request optimization. Cache hit rate: <b>91.3%</b> <span class="measured-badge">measured · pending official reconciliation 实测·待官方对账</span>. Cache-miss requests: <b>8.5%</b> of token volume, <b>56%</b> of cost <span class="measured-badge">measured 实测·待官方对账</span>. LAO plugs exactly that hole.</p>
-      <p class="zh">你的问题：缓存未命中的请求只占 token 量的 8.5%，却吃掉成本的 56%。LAO 的做法：模型选品＋按任务匹配＋请求优化，专门堵住这个洞。</p>
+      <p><b>What LAO does:</b> model selection + per-task matching + request optimization. Cache hit rate: <b>91.3%</b> <span class="measured-badge">measured · pending official reconciliation</span>. Cache-miss requests: <b>8.5%</b> of token volume, <b>56%</b> of cost <span class="measured-badge">measured · pending official reconciliation</span>. LAO plugs exactly that hole.</p>
     </div>
     <div class="card">
-      <h3>② Memory <span class="zh-inline">记忆</span></h3>
+      <h3>② Memory</h3>
       <p><b>Your problem:</b> every session starts blank; the experience you paid for walks out the door.</p>
       <p><b>What LAO does:</b> your experience settles in and compounds — the more you use it, the better it knows you. And it always stays yours.</p>
-      <p class="zh">你的问题：每次对话从零开始，花过的钱攒不下经验。LAO 的做法：你的经验沉淀下来，越用越懂你——并且始终是你的。</p>
     </div>
     <div class="card">
-      <h3>③ Answers anchored to you <span class="zh-inline">不乱说话</span></h3>
+      <h3>③ Answers anchored to you</h3>
       <p><b>Your problem:</b> LLM answers are probabilistic — "maybe right" is not good enough when it spends your money.</p>
       <p><b>What LAO does:</b> two layers of certainty. <b>Request side — intent lock:</b> LAO optimizes how you say it, never what you mean. <b>Answer side — experience anchor:</b> LAO calibrates answers against your facts and your cognitive system, turning "maybe right" into "right against your tacit experience". If calibration fails, it honestly falls back to the LLM's raw answer — never forces one.</p>
-      <p class="zh">你的问题：LLM 的回答是概率性的，"可能对"不够。LAO 的做法：请求侧意图锁定——优化表达不改本意；回答侧经验锚定——校准不过关就诚实回退，绝不硬给。</p>
     </div>
   </div>
 </section>
 
-<!-- 第三屏：省钱实证单（橱窗） -->
+<!-- Independent oversight: our only standpoint -->
 <section class="section">
-  <h2>Real numbers, not promises. <span class="zh-inline">真数字，不画饼。</span></h2>
+  <h2>Independent oversight — on your side of the table.</h2>
+  <div class="rule"></div>
+  <p class="lead">LLM vendors sell you tokens. Runtimes move them. Nobody on that side of the table gets paid when you spend less. That's why an independent third party has to sit between them and you — aligned with your interests, representing no vendor, watching the door so your money isn't burned. LAO exists for exactly that one job: save your money, and never talk loosely while doing it.</p>
+  <div class="grid">
+    <div class="card">
+      <h3>🛡️ Represents no vendor</h3>
+      <p>LAO earns nothing per token and marks up nothing. Its only measurable value is your saved cost.</p>
+    </div>
+    <div class="card">
+      <h3>🔍 Everything auditable</h3>
+      <p>Open source under Apache 2.0. Every saving claim is published with its data source and waits for official reconciliation before it counts.</p>
+    </div>
+    <div class="card">
+      <h3>🔑 Keys stay with you</h3>
+      <p>Your own API keys, your own data, no telemetry, no lock-in. You can walk away at any time.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Real numbers, not promises -->
+<section class="section">
+  <h2>Real numbers, not promises.</h2>
   <div class="rule"></div>
   <p class="lead">Every card below = a scenario + a measured saving + its data source. All figures are reconciled against the official provider console before publication. See how we verify: <a href="./evidence/">Evidence &amp; Verification →</a></p>
   <div class="grid">
     <div class="card showcase-empty">
       <h3>📋 Receipt slots reserved</h3>
-      <p>No figure appears here until it has passed official reconciliation. Slots are ready; receipts are being reconciled one by one. 未经官方对账的数字不上墙；实证单逐条对账后上架。</p>
+      <p>No figure appears here until it has passed official reconciliation. Slots are ready; receipts are being reconciled one by one.</p>
       <p><a href="./evidence/">How verification works →</a></p>
     </div>
   </div>
 </section>
 
-<!-- 第四屏：经验资产展示区（第一阶段核心转化件） -->
+<!-- Experience showcase -->
 <section class="section">
   <h2>You may not know it yet — your know-how is worth something.</h2>
-  <p class="lead zh">你也许还不知道：你的隐性经验，是可以变现的。</p>
   <div class="rule"></div>
-  <p class="lead">Here we display the first batch of confirmed experience assets — all from real work, real days. Look around, try things; the next one on the wall could be yours. <span class="zh-inline">这里陈列着第一批已确权的经验资产——它们都来自真实的工作沉淀。看一看，试一试；也许下一个，就是你的。</span></p>
+  <p class="lead">Here we display the first batch of confirmed experience assets — all from real work, real days. Look around, try things; the next one on the wall could be yours.</p>
   <div class="grid">
     <a class="card" href="./market/">
-      <h3>🖼️ Visit the showcase <span class="zh-inline">看展厅</span></h3>
-      <p>Display &amp; education only — no live trading in this stage. 展示教育阶段，不开放真实交易。</p>
+      <h3>🖼️ Visit the showcase</h3>
+      <p>Display &amp; education only — no live trading in this stage.</p>
       <span class="cta">Browse →</span>
     </a>
     <div class="card placeholder-card">
-      <h3>💬 Private community <span class="zh-inline">私域入口</span></h3>
-      <p>Community entry coming soon — link and details will appear here once ready. 社区入口即将开放。</p>
+      <h3>💬 Private community</h3>
+      <p>Community entry coming soon — link and details will appear here once ready.</p>
     </div>
   </div>
 </section>
 
-<!-- 第五屏：开源（货架） -->
+<!-- Open source -->
 <section class="section">
-  <h2>Take the recipe. It's yours to run.</h2>
+  <h2>Open source. Yours to run.</h2>
   <div class="rule"></div>
   <div class="grid">
     <div class="card">
@@ -126,22 +141,40 @@
       <p><a href="https://github.com/ZWISERFIT/lao" target="_blank" rel="noopener">GitHub: ZWISERFIT/lao →</a></p>
     </div>
     <div class="card">
-      <h3>📖 Recipe public, ratios reserved</h3>
-      <p>Code fully public under Apache 2.0; tuning ratios stay with us. 配方（代码）全公开；配比（调优参数）保留。</p>
+      <h3>📖 Apache 2.0</h3>
+      <p>Read it, audit it, fork it. The code is public because trust has to be verifiable.</p>
     </div>
     <div class="card">
       <h3>🔑 Zero LLM calls in the component</h3>
-      <p>You deploy it with your own keys. We never mark up your tokens. 组件本身零LLM调用：你部署，就用你自己的key，我们不赚差价。</p>
+      <p>You deploy it with your own keys. We never mark up your tokens.</p>
     </div>
   </div>
   <p style="margin-top:22px;"><a class="btn red" href="./download/">Install guide →</a></p>
 </section>
 
-<!-- Trust Builders（Ali 三轮深谈：外部反馈 → 真实改变 · 骨架） -->
+<!-- ZWISERFIT: the company behind LAO -->
 <section class="section">
-  <h2>Outside voices, real changes. <span class="zh-inline">外部声音，真实改变。</span></h2>
+  <h2>About ZWISERFIT</h2>
   <div class="rule"></div>
-  <p class="lead">Comments from strangers became merged code, fixed releases, and standing rules. Every item below is verifiable in the public repository. 陌生人的评论变成了合并的代码、修复的版本和长期纪律——每一条都可在公开仓库查证。</p>
+  <p class="lead"><b>LAO is ZWISERFIT's first open-source product — not the only one we will build.</b> ZWISERFIT stands for one thing: tools that sit on the user's side. Everything we ship will keep the same three promises — aligned with your interests, honest about what it can and cannot do, and yours to keep.</p>
+  <div class="grid">
+    <div class="card">
+      <h3>🥇 LAO — shipping now</h3>
+      <p>The independent third party between your LLM and your Runtime. Open source, free, on your side.</p>
+      <span class="cta"><a href="./about/">More about us →</a></span>
+    </div>
+    <div class="card placeholder-card">
+      <h3>🔜 What comes next</h3>
+      <p>We build one product at a time, and we only announce what is already real. When the next one is ready, it will appear here.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Trust Builders -->
+<section class="section">
+  <h2>Outside voices, real changes.</h2>
+  <div class="rule"></div>
+  <p class="lead">Comments from strangers became merged code, fixed releases, and standing rules. Every item below is verifiable in the public repository.</p>
   <div class="grid">
     <div class="card">
       <h3>💬 → 💻 A comment became code</h3>
@@ -160,12 +193,11 @@
 </section>
 
 <div class="footer">
-  <p><i>"I hit these holes myself, so you don't have to." 我走过的坑，不想大家继续走。</i></p>
-  <p style="margin-top:8px;"><b>LAO</b> · ZWISERFIT's first product · open source · an independent third party between your LLM and your Runtime, on the user's side</p>
+  <p><i>"I hit these holes myself, so you don't have to."</i></p>
+  <p style="margin-top:8px;"><b>ZWISERFIT</b> · LAO is our first open-source product · an independent third party between your LLM and your Runtime, on the user's side</p>
   <p style="margin-top:8px;">
     <a href="./privacy/">Privacy (no telemetry)</a> ·
     <a href="./evidence/">Evidence</a> ·
-    <a href="./roadmap/">Roadmap</a> ·
     <a href="./trust/">Trust Builders</a> ·
     <a href="./about/">About</a> ·
     <a href="./community/">Community</a> ·
