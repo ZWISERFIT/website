@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LAO — 站在你的 LLM 与 Runtime 之间的独立第三方</title>
-<meta name="description" content="LAO 是 ZWISERFIT 的第一个开源产品。一个坐在你的 LLM 与 Runtime 之间、站在用户利益一边的独立第三方：减少浪费的 token，把回答锚定在你的经验上。免费，无遥测。">
+<meta name="description" content="LAO 是 ZWISERFIT 的第一个开源产品。站在你的 LLM 与 Runtime 之间的独立第三方：减少浪费的 token，把回答锚定在你的经验上。免费，无遥测。">
 <link rel="stylesheet" href="../css/site.css">
 <link rel="icon" type="image/png" href="../img/logo.png">
 </head>
@@ -24,113 +24,102 @@
   </div>
 </nav>
 
-<!-- 第一眼：一句话说清我们是什么 -->
 <header class="hero">
-  <h1>LAO — 站在你的 <span class="dot">LLM</span> 与 <span class="dot">Runtime</span> 之间的独立第三方</h1>
-  <p class="sub">LAO 是 ZWISERFIT 的第一个开源产品。它坐在你的 LLM 与 Runtime 之间，与你的利益对齐，只站在你这一边：为每个任务选对模型，减少浪费的 token，把回答锚定在你的经验上。</p>
-  <p class="sub">谁来盯着 LLM 和 Runtime，让它们不再烧你的 token？你需要一个可信的、独立的第三方——一个利益和你一致的第三方。这就是 LAO。</p>
+  <h1>站在你的 <span class="dot">LLM</span> 与 <span class="dot">Runtime</span> 之间的独立第三方。</h1>
+  <p class="sub">LAO 选对模型，省下浪费的 token，把回答锚定在你的经验上。</p>
+  <p class="sub">LLM 厂商卖 token，Runtime 搬 token。LAO 替你看住门。</p>
   <p style="margin-top:22px;">
     <a class="btn red" href="./download/">获取 LAO — 免费 &amp; 开源</a>
     <a class="btn" style="margin-left:10px;" href="./for-agents/">给 Agent →</a>
   </p>
-  <p class="tag" style="margin-top:18px;">Apache 2.0 · 开源 · 无遥测 · 无锁定</p>
+  <p class="tag" style="margin-top:18px;">Apache 2.0 · 无遥测 · 无锁定</p>
 </header>
 
-<!-- 两扇门 -->
 <section class="section">
-  <h2>两扇门，选你的那扇。</h2>
+  <h2>两扇门，选你的。</h2>
   <div class="rule"></div>
   <div class="grid doors">
     <a class="card door" href="./download/">
       <h3>🚪 人类之门</h3>
-      <p>用真实、实测的数字降低你的 LLM 账单——并且看得到凭证。</p>
+      <p>实测的节省，带凭证。</p>
       <span class="cta">进入 →</span>
     </a>
     <a class="card door" href="./for-agents/">
       <h3>🤖 Agent 之门</h3>
-      <p>机器可读：LAO 是什么、如何安装、接口长什么样。为 agent 自主发现并选择 LAO 而建。</p>
+      <p>机器可读简报：LAO 是什么，凭什么值得信任。</p>
       <span class="cta">进入 →</span>
     </a>
   </div>
 </section>
 
-<!-- 你的问题 → LAO 做什么 -->
 <section class="section">
-  <h2>你的问题 → LAO 怎么做。</h2>
+  <h2>你的问题。我们的事。</h2>
   <div class="rule"></div>
   <div class="grid">
     <div class="card">
       <h3>① 省钱</h3>
-      <p><b>你的问题：</b>缓存未命中的请求只占 token 量的一小部分——却吃掉你账单的大头。</p>
-      <p><b>LAO 怎么做：</b>模型选择 + 按任务匹配 + 请求优化。缓存命中率：<b>91.3%</b> <span class="measured-badge">实测 · 待官方对账</span>。缓存未命中请求：占 token 量 <b>8.5%</b>，占成本 <b>56%</b> <span class="measured-badge">实测 · 待官方对账</span>。LAO 正好堵的就是这个洞。</p>
+      <p>缓存未命中的请求占 token 量 <b>8.5%</b>，却占成本 <b>56%</b> <span class="measured-badge">实测 · 待官方对账</span>。LAO 堵的就是这个洞。缓存命中率：<b>91.3%</b> <span class="measured-badge">实测 · 待官方对账</span>。</p>
     </div>
     <div class="card">
       <h3>② 记忆</h3>
-      <p><b>你的问题：</b>每次会话都从零开始；你花钱换来的经验转身就走。</p>
-      <p><b>LAO 怎么做：</b>你的经验沉淀下来并复利增长——用得越多，它越懂你。而且它永远属于你。</p>
+      <p>今天每次会话都从零开始。有了 LAO，你的经验沉淀、复利——并且永远归你。</p>
     </div>
     <div class="card">
-      <h3>③ 锚定你的回答</h3>
-      <p><b>你的问题：</b>LLM 的回答是概率性的——当它花的是你的钱时，"可能对"远远不够。</p>
-      <p><b>LAO 怎么做：</b>两层确定性。<b>请求侧——意图锁：</b>LAO 优化的是你怎么说，绝不改变你的本意。<b>回答侧——经验锚：</b>LAO 用你的事实和你的认知体系校准回答，把"可能对"变成"对着你的默会经验而言是对的"。校准失败时，如实回退到 LLM 的原始回答——从不硬塞。</p>
+      <h3>③ 锚定的回答</h3>
+      <p><b>意图锁：</b>优化你怎么说，绝不改变你的本意。<b>经验锚：</b>"可能对"变成对着你的经验而言是对的——或如实回退。绝不硬塞。</p>
     </div>
   </div>
 </section>
 
-<!-- 独立监管：我们唯一的立场 -->
 <section class="section">
   <h2>独立监管 — 坐在你这一边。</h2>
   <div class="rule"></div>
-  <p class="lead">LLM 厂商向你卖 token，Runtime 负责搬运它们。桌子那一侧，没有人因为你少花钱而获益。所以必须有一个独立的第三方坐在它们和你之间——与你的利益对齐，不代表任何厂商，替你看住门，不让你的钱被烧掉。LAO 存在的意义就是这一件事：帮你省钱，并且在省钱的过程中绝不大言不惭。</p>
+  <p class="lead">桌子那一侧，没有人因为你少花钱而获益。所以必须有人独立地替你看住门——不代表任何厂商，只与你对齐。</p>
   <div class="grid">
     <div class="card">
       <h3>🛡️ 不代表任何厂商</h3>
-      <p>LAO 不从任何 token 中抽成，也不加价任何东西。它唯一可度量的价值，是你省下的成本。</p>
+      <p>不加价，不按 token 抽成。你省下的成本是唯一度量。</p>
     </div>
     <div class="card">
       <h3>🔍 一切可审计</h3>
-      <p>Apache 2.0 开源。每一条省钱声明都公布其数据来源，并通过官方对账后才算数。</p>
+      <p>Apache 2.0。每条声明带来源，等官方对账后才算数。</p>
     </div>
     <div class="card">
       <h3>🔑 钥匙在你手里</h3>
-      <p>你自己的 API key，你自己的数据，无遥测，无锁定。你随时可以离开。</p>
+      <p>你的 key，你的数据，无遥测。随时可以离开。</p>
     </div>
   </div>
 </section>
 
-<!-- 真实数字，不是承诺 -->
 <section class="section">
   <h2>真实数字，不是承诺。</h2>
   <div class="rule"></div>
-  <p class="lead">下面每张卡片 = 一个场景 + 一笔实测节省 + 它的数据来源。所有数字都在发布前与厂商官方控制台对账。看看我们如何验证：<a href="./evidence/">证据与验证 →</a></p>
+  <p class="lead">没有来源的数字不发布。成本数字对账后才公开。<a href="./evidence/">我们如何验证 →</a></p>
   <div class="grid">
     <div class="card showcase-empty">
       <h3>📋 凭证位已预留</h3>
-      <p>任何数字在通过官方对账之前不会出现在这里。位置已备好，凭证正在逐一核对。</p>
-      <p><a href="./evidence/">验证机制是怎么运作的 →</a></p>
+      <p>位置已备好，凭证逐一核对中。</p>
     </div>
   </div>
 </section>
 
-<!-- 经验展示 -->
 <section class="section">
-  <h2>你可能还不知道——你的经验是有价值的。</h2>
+  <h2>你的经验是有价值的。</h2>
   <div class="rule"></div>
-  <p class="lead">这里展示第一批已确认的经验资产——全部来自真实工作、真实日子。四处看看，试一试；墙上的下一件，可能就是你的。</p>
+  <p class="lead">第一批已确认的经验资产，全部来自真实工作。四处看看——墙上的下一件，可能就是你的。</p>
   <div class="grid">
     <a class="card" href="./market/">
       <h3>🖼️ 参观展示墙</h3>
-      <p>仅展示与教育——现阶段不进行真实交易。</p>
+      <p>仅展示与教育——现阶段不交易。</p>
       <span class="cta">浏览 →</span>
     </a>
     <div class="card placeholder-card">
       <h3>💬 私密社区</h3>
-      <p>社区入口即将开放——准备好后，链接与详情会出现在这里。</p>
+      <p>入口即将开放。</p>
     </div>
   </div>
 </section>
 
-<!-- 开源 -->
 <section class="section">
   <h2>开源。由你来跑。</h2>
   <div class="rule"></div>
@@ -142,51 +131,49 @@
     </div>
     <div class="card">
       <h3>📖 Apache 2.0</h3>
-      <p>读它，审计它，fork 它。代码公开，因为信任必须可验证。</p>
+      <p>读它，审计它，fork 它。</p>
     </div>
     <div class="card">
-      <h3>🔑 组件自身零 LLM 调用</h3>
-      <p>你用自己的 key 部署它。我们永远不在你的 token 上加价。</p>
+      <h3>🔑 零 LLM 调用</h3>
+      <p>你的 key。不加价。永远。</p>
     </div>
   </div>
   <p style="margin-top:22px;"><a class="btn red" href="./download/">安装指南 →</a></p>
 </section>
 
-<!-- ZWISERFIT：LAO 背后的公司 -->
 <section class="section">
   <h2>关于 ZWISERFIT</h2>
   <div class="rule"></div>
-  <p class="lead"><b>LAO 是 ZWISERFIT 的第一个开源产品——不是我们要做的唯一一个。</b> ZWISERFIT 只做一件事：站在用户一侧的工具。我们发布的每一个产品都会守住同样的三个承诺——与你的利益对齐，对自己能做和不能做的事诚实，并且永远归你所有。</p>
+  <p class="lead"><b>LAO 是我们的第一个开源产品——不是最后一个。</b> 我们发布的每个产品都守住三个承诺：站在你这一边，对能力边界诚实，永远归你所有。</p>
   <div class="grid">
     <div class="card">
       <h3>🥇 LAO — 已上线</h3>
-      <p>站在你的 LLM 与 Runtime 之间的独立第三方。开源、免费、站在你这一边。</p>
+      <p>站在你的 LLM 与 Runtime 之间的独立第三方。</p>
       <span class="cta"><a href="./about/">了解更多 →</a></span>
     </div>
     <div class="card placeholder-card">
       <h3>🔜 下一个会是什么</h3>
-      <p>我们一次只做一个产品，并且只宣布已经成真的事。下一个产品准备好时，会出现在这里。</p>
+      <p>我们只宣布已经成真的事。</p>
     </div>
   </div>
 </section>
 
-<!-- 信任建设者 -->
 <section class="section">
   <h2>外面的声音，真实的改变。</h2>
   <div class="rule"></div>
-  <p class="lead">陌生人的评论变成了被合并的代码、修复的版本和长期规则。下面每一条都可以在公开仓库中验证。</p>
+  <p class="lead">陌生人的反馈变成了被合并的代码、修复的版本和长期规则。全部可验证。</p>
   <div class="grid">
     <div class="card">
-      <h3>💬 → 💻 一条评论变成了代码</h3>
-      <p>一位读者提出"回归回放"：失败应该变成不再复发的约束。它现在以 <code>fixture_pair.py</code> 的形式在仓库中发布。</p>
+      <h3>💬 → 💻</h3>
+      <p>一位读者提出"回归回放"；它现在以 <code>fixture_pair.py</code> 发布。</p>
     </div>
     <div class="card">
-      <h3>📧 → 🛠️ 五个缺口，全部修复</h3>
-      <p>一封邮件列出了 5 个技术缺口——每一个都被修复并发布。可在仓库 issue 中追溯。</p>
+      <h3>📧 → 🛠️</h3>
+      <p>五个缺口，全部在 v3.5.1 修复。可追溯 issue #9。</p>
     </div>
     <div class="card">
-      <h3>🙋 → ⭐ 第一位外部贡献者</h3>
-      <p>我们的第一次外部代码贡献——一个校对 PR——经过审阅并合并。这扇门是双向的。</p>
+      <h3>🙋 → ⭐</h3>
+      <p>第一个外部 PR——经审阅并合并。</p>
     </div>
   </div>
   <p style="margin-top:18px;"><a class="btn" href="./trust/">读完整故事 →</a></p>
@@ -194,9 +181,9 @@
 
 <div class="footer">
   <p><i>"这些坑我自己踩过，所以你不必再踩。"</i></p>
-  <p style="margin-top:8px;"><b>ZWISERFIT</b> · LAO 是我们的第一个开源产品 · 站在你的 LLM 与 Runtime 之间，站在用户一侧</p>
+  <p style="margin-top:8px;"><b>ZWISERFIT</b> · LAO 是我们的第一个开源产品 · 站在用户一侧</p>
   <p style="margin-top:8px;">
-    <a href="./privacy/">隐私（无遥测）</a> ·
+    <a href="./privacy/">隐私</a> ·
     <a href="./evidence/">证据</a> ·
     <a href="./trust/">信任建设者</a> ·
     <a href="./about/">关于</a> ·

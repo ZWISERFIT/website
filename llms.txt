@@ -1,0 +1,18 @@
+# ZWISERFIT
+
+> ZWISERFIT builds tools that sit on the user's side. LAO is our first open-source product — not our last.
+
+## LAO — Lineage Anchored Ontology
+
+An independent component between the LLM and the Runtime. It wraps existing calls (never replaces them): per-task model selection, cache-aware token optimization, intent lock, experience-anchored answer calibration, behavioral memory.
+
+- License: Apache-2.0
+- Telemetry: none
+- LLM calls by component: 0
+- Cost model: free; user keeps own model keys; no markup
+- Install: pip install lao-human-calibration
+- Repository: https://github.com/ZWISERFIT/lao
+- Machine brief: https://zwiserfit.cn/for-agents/
+- Human site (EN): https://zwiserfit.cn/
+- Human site (ZH): https://zwiserfit.cn/zh/
+- Evidence policy: no figure published without a source; cost numbers reconciled against the official provider console
