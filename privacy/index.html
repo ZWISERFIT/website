@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy — No Telemetry | LAO</title>
+<meta name="description" content="The current version of LAO performs no telemetry. Historical telemetry is honestly disclosed. This page mirrors PRIVACY.md in the open-source repository.">
+<link rel="stylesheet" href="../css/site.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="brand"><span class="dot"></span>LAO</div>
+  <div class="links">
+    <a href="../">Home</a>
+    <a href="../download/">Install</a>
+    <a href="../market/">Experience</a>
+    <a href="../demo/">Calculator</a>
+    <a href="../evidence/">Evidence</a>
+    <a href="../roadmap/">Roadmap</a>
+    <a href="../about/">About</a>
+    <a href="../for-agents/">For Agents</a>
+  </div>
+</nav>
+
+<header class="hero" style="padding:56px 24px 48px;">
+  <h1>Privacy: <span class="dot">no telemetry.</span></h1>
+  <p class="sub">The current version (v3.6.0-r3) sends nothing anywhere. History below, told honestly. This page mirrors <code>PRIVACY.md</code> in the open-source repository — that file is the authority.</p>
+  <p class="sub zh">当前版本不做任何遥测。历史遥测如实披露。本页与开源仓库 PRIVACY.md 口径一致，以仓库文件为准。</p>
+</header>
+
+<section class="section">
+  <h2>Current version <span class="zh-inline">当前版本</span></h2>
+  <div class="rule"></div>
+  <p class="lead">Importing or running this repository's code does not send version numbers, heartbeats, or usage data to any external server. There is no default-on network call-back of any kind.</p>
+  <p class="zh">导入或运行本仓库代码不会向任何外部服务器发送版本号、心跳或使用数据；不存在任何默认开启的网络回传。</p>
+</section>
+
+<section class="section">
+  <h2>Historical disclosure (honest) <span class="zh-inline">历史披露（如实）</span></h2>
+  <div class="rule"></div>
+  <p class="lead">From commit <code>0efd980</code> (2026-08-10) until v3.6.0-r2, one default-on version telemetry existed: on import, a background thread sent the version number and a locally generated anonymous ID to <code>https://effect-anchored-telemetry.zwiserfit.cn/ping</code> (opt-out via <code>EFFECT_ANCHORED_TELEMETRY=0</code>).</p>
+  <p class="lead">Three verified facts about that period:</p>
+  <ul class="facts">
+    <li><b>The domain never resolved (NXDOMAIN)</b> — the endpoint was unreachable; <b>no telemetry data was ever collected</b>.</li>
+    <li>The telemetry may have created <code>~/.effect_anchored_anon_id</code> (a UUID v4) in the user's home directory.</li>
+    <li>Since v3.6.0-r3, this code has been removed entirely.</li>
+  </ul>
+  <p class="zh">事实一：该域名从未解析（NXDOMAIN），回传目标不可达，没有任何遥测数据被实际回收；事实二：可能在用户主目录创建过匿名ID文件；事实三：自v3.6.0-r3起该代码已整体移除。</p>
+  <div class="code-block">
+<span class="cm"># check for a leftover anonymous ID file</span>
+ls ~/.effect_anchored_anon_id
+<span class="cm"># remove it if present</span>
+rm ~/.effect_anchored_anon_id
+  </div>
+</section>
+
+<section class="section">
+  <h2>Future versions <span class="zh-inline">未来版本</span></h2>
+  <div class="rule"></div>
+  <p class="lead">Any install/usage statistics, if ever introduced, must be: default-off, explicitly asked on first run, field-whitelisted, revocable at any time — and declared in <code>PRIVACY.md</code> beforehand.</p>
+  <p class="zh">任何安装/使用统计（若引入）必须满足：默认关闭、首次运行显式询问、字段白名单、可随时撤回，并事先在 PRIVACY.md 声明。</p>
+</section>
+
+<div class="footer">
+  <p>Last aligned with PRIVACY.md: 2026-08-26 · v3.6.0-r3</p>
+  <p style="margin-top:8px;"><a href="../">Home</a> · © 2026 ZWISERFIT · Apache 2.0</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Install LAO — Free &amp; Open Source (Apache 2.0)</title>
+<meta name="description" content="Install LAO: free, open source (Apache 2.0). The recipe is public; bring your own keys. GitHub entry, install command, and what's open vs reserved.">
+<link rel="stylesheet" href="../css/site.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="brand"><span class="dot"></span>LAO</div>
+  <div class="links">
+    <a href="../">Home</a>
+    <a href="../download/">Install</a>
+    <a href="../market/">Experience</a>
+    <a href="../demo/">Calculator</a>
+    <a href="../evidence/">Evidence</a>
+    <a href="../roadmap/">Roadmap</a>
+    <a href="../about/">About</a>
+    <a href="../for-agents/">For Agents</a>
+  </div>
+</nav>
+
+<header class="hero" style="padding:56px 24px 48px;">
+  <h1>Get LAO — <span class="dot">free</span> &amp; open source</h1>
+  <p class="sub">No pricing tiers. No registration. No payment. Take the recipe and run it with your own keys.</p>
+  <p class="sub zh">没有价目表、没有注册、没有付费。配方公开，用你自己的key运行。</p>
+</header>
+
+<section class="section">
+  <h2>Install <span class="zh-inline">安装</span></h2>
+  <div class="rule"></div>
+  <div class="code-block">
+<span class="cm"># Python 3.9+</span>
+pip install lao-human-calibration
+  </div>
+  <p class="lead">Or from source:</p>
+  <div class="code-block">
+git clone https://github.com/ZWISERFIT/lao.git
+cd lao && pip install .
+  </div>
+  <p><a class="btn" href="https://github.com/ZWISERFIT/lao" target="_blank" rel="noopener">GitHub: ZWISERFIT/lao →</a></p>
+</section>
+
+<section class="section">
+  <h2>Quick start <span class="zh-inline">快速上手</span></h2>
+  <div class="rule"></div>
+  <div class="code-block">
+<span class="cm"># bring your own model API keys — LAO itself makes zero LLM calls</span>
+from lao.human_calibration import HumanCalibration
+
+cal = HumanCalibration(owner="you")
+cal.ingest(task="...", result="...")   <span class="cm"># experience settles in</span>
+best = cal.retrieve(query="...")       <span class="cm"># answers anchored to your experience</span>
+  </div>
+  <p class="zh">组件本身零LLM调用：你部署，就用你自己的key，我们不赚差价。</p>
+</section>
+
+<section class="section">
+  <h2>Recipe vs. ratios <span class="zh-inline">配方与配比</span></h2>
+  <div class="rule"></div>
+  <div class="grid">
+    <div class="card">
+      <h3>✅ Recipe — public</h3>
+      <p>All code under Apache 2.0: routing, calibration, memory chain. Read it, audit it, fork it. 配方（代码）全公开。</p>
+    </div>
+    <div class="card">
+      <h3>🔒 Ratios — reserved</h3>
+      <p>Production tuning parameters stay with the maintainer. 配比（调优参数）保留。</p>
+    </div>
+    <div class="card">
+      <h3>🕵️ Telemetry — none</h3>
+      <p>The current version sends nothing anywhere, ever. History honestly disclosed. <a href="../privacy/">Privacy page →</a></p>
+    </div>
+  </div>
+</section>
+
+<div class="footer">
+  <p><b>LAO</b> · open source · free · only on your side</p>
+  <p style="margin-top:8px;"><a href="../privacy/">Privacy</a> · <a href="../">Home</a> · © 2026 ZWISERFIT · Apache 2.0</p>
+</div>
+
+</body>
+</html>
