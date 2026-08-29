@@ -33,10 +33,11 @@
   <h2>Install</h2>
   <div class="rule"></div>
   <div class="code-block">
-<span class="cm"># Python 3.9+</span>
-pip install lao-human-calibration
+<span class="cm"># Python 3.9+ · current release, from source</span>
+pip install git+https://github.com/ZWISERFIT/lao.git
   </div>
-  <p class="lead">Or from source:</p>
+  <p class="lead">PyPI currently hosts 0.1.0 — an early build without the CLI. Until PyPI is refreshed, current releases ship from source.</p>
+  <p class="lead">Or clone:</p>
   <div class="code-block">
 git clone https://github.com/ZWISERFIT/lao.git
 cd lao && pip install .
@@ -48,12 +49,14 @@ cd lao && pip install .
   <h2>Quick start</h2>
   <div class="rule"></div>
   <div class="code-block">
-<span class="cm"># bring your own model API keys — LAO itself makes zero LLM calls</span>
-from lao.human_calibration import HumanCalibration
+<span class="cm"># initialize the LAO runtime</span>
+lao init
 
-cal = HumanCalibration(owner="you")
-cal.ingest(task="...", result="...")   <span class="cm"># experience settles in</span>
-best = cal.retrieve(query="...")       <span class="cm"># answers anchored to your experience</span>
+<span class="cm"># record one Trust Event, in your own words</span>
+lao trust-event --text "..."
+
+<span class="cm"># see anchor status</span>
+lao status
   </div>
   <p class="lead">The component itself makes zero LLM calls: you deploy it with your own keys, and we never take a cut of your tokens.</p>
 </section>

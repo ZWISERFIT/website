@@ -10,7 +10,7 @@ An independent component between the LLM and the Runtime. It wraps existing call
 - Telemetry: none
 - LLM calls by component: 0
 - Cost model: free; user keeps own model keys; no markup
-- Install: pip install lao-human-calibration
+- Install: pip install git+https://github.com/ZWISERFIT/lao.git (PyPI currently hosts 0.1.0, an early build without the CLI; current releases ship from source)
 - Repository: https://github.com/ZWISERFIT/lao
 - Machine brief: https://zwiserfit.cn/for-agents/
 - Human site (EN): https://zwiserfit.cn/

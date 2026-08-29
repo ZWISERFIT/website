@@ -75,6 +75,8 @@ a:hover { text-decoration: underline; }
 
 /* 卡片网格 */
 .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px; }
+/* 可插拔凭证卡：对账出数后直接贴卡，无需改版式 */
+.card.receipt { border-left:5px solid var(--ok); }
 .card {
   background:var(--card); border:1px solid var(--line); border-radius:12px; padding:24px;
   transition:transform .15s, box-shadow .15s;

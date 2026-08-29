@@ -33,10 +33,11 @@
   <h2>安装</h2>
   <div class="rule"></div>
   <div class="code-block">
-<span class="cm"># Python 3.9+</span>
-pip install lao-human-calibration
+<span class="cm"># Python 3.9+ · 当前版本，从源码安装</span>
+pip install git+https://github.com/ZWISERFIT/lao.git
   </div>
-  <p class="lead">或者从源码安装：</p>
+  <p class="lead">PyPI 上目前是 0.1.0——没有 CLI 的早期版本。PyPI 更新前，当前版本从源码安装。</p>
+  <p class="lead">或者克隆：</p>
   <div class="code-block">
 git clone https://github.com/ZWISERFIT/lao.git
 cd lao && pip install .
@@ -48,12 +49,14 @@ cd lao && pip install .
   <h2>快速上手</h2>
   <div class="rule"></div>
   <div class="code-block">
-<span class="cm"># 自带你的模型 API key — LAO 自身零 LLM 调用</span>
-from lao.human_calibration import HumanCalibration
+<span class="cm"># 初始化 LAO runtime</span>
+lao init
 
-cal = HumanCalibration(owner="you")
-cal.ingest(task="...", result="...")   <span class="cm"># 经验沉淀</span>
-best = cal.retrieve(query="...")       <span class="cm"># 回答锚定在你的经验上</span>
+<span class="cm"># 用你自己的话记录一条 Trust Event</span>
+lao trust-event --text "..."
+
+<span class="cm"># 查看锚定状态</span>
+lao status
   </div>
   <p class="lead">组件自身零 LLM 调用：你用自己的 key 部署它，我们永远不在你的 token 里抽成。</p>
 </section>

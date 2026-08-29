@@ -95,7 +95,14 @@
   <h2>真实数字，不是承诺。</h2>
   <div class="rule"></div>
   <p class="lead">没有来源的数字不发布。成本数字对账后才公开。<a href="./evidence/">我们如何验证 →</a></p>
-  <div class="grid">
+  <!-- 凭证墙（可插拔）：每笔对账出数后贴一张卡——无需改版式。
+  <div class="card receipt">
+    <h3>💰 [场景]</h3>
+    <p>[节省金额] · 已与 [厂商] 官方控制台对账 · [日期]</p>
+    <span class="status live">已对账</span>
+  </div>
+  -->
+  <div class="grid" id="receipt-wall">
     <div class="card showcase-empty">
       <h3>📋 凭证位已预留</h3>
       <p>位置已备好，凭证逐一核对中。</p>
@@ -126,7 +133,7 @@
   <div class="grid">
     <div class="card">
       <h3>📦 一条命令</h3>
-      <div class="code-block">pip install lao-human-calibration</div>
+      <div class="code-block">pip install git+https://github.com/ZWISERFIT/lao.git</div>
       <p><a href="https://github.com/ZWISERFIT/lao" target="_blank" rel="noopener">GitHub: ZWISERFIT/lao →</a></p>
     </div>
     <div class="card">

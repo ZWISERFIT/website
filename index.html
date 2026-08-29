@@ -95,7 +95,14 @@
   <h2>Real numbers, not promises.</h2>
   <div class="rule"></div>
   <p class="lead">No figure appears without a source. Cost numbers publish only after official reconciliation. <a href="./evidence/">How we verify →</a></p>
-  <div class="grid">
+  <!-- RECEIPT WALL (pluggable): paste one card per reconciled figure — no layout change needed.
+  <div class="card receipt">
+    <h3>💰 [scenario]</h3>
+    <p>[saved amount] · reconciled against the [provider] official console · [date]</p>
+    <span class="status live">reconciled</span>
+  </div>
+  -->
+  <div class="grid" id="receipt-wall">
     <div class="card showcase-empty">
       <h3>📋 Receipt slots reserved</h3>
       <p>Slots ready; receipts being reconciled one by one.</p>
@@ -126,7 +133,7 @@
   <div class="grid">
     <div class="card">
       <h3>📦 One command</h3>
-      <div class="code-block">pip install lao-human-calibration</div>
+      <div class="code-block">pip install git+https://github.com/ZWISERFIT/lao.git</div>
       <p><a href="https://github.com/ZWISERFIT/lao" target="_blank" rel="noopener">GitHub: ZWISERFIT/lao →</a></p>
     </div>
     <div class="card">
