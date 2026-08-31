@@ -1,18 +1,38 @@
 # ZWISERFIT
 
-> ZWISERFIT builds tools that sit on the user's side. LAO is our first open-source product — not our last.
+> ZWISERFIT builds tools that sit on the user's side. Our incentive is aligned with the user's interest — we save you money, and we take no markup, no telemetry, no cut. LAO is our first open-source product — not our last.
 
 ## LAO — Lineage Anchored Ontology
 
-An independent component between the LLM and the Runtime. It wraps existing calls (never replaces them): per-task model selection, cache-aware token optimization, intent lock, experience-anchored answer calibration, behavioral memory.
+An independent third party between the LLM and the Runtime. It wraps existing calls (never replaces them): per-task model selection, cache-aware token optimization, intent lock, experience-anchored answer calibration, behavioral memory. LLM vendors sell tokens; runtimes move them; LAO watches the door for you.
+
+## Core numbers (measured, sources below)
+
+- Cache hit rate: 91.3% — source: https://zwiserfit.cn/v2/evidence/
+- Cache-miss requests: 8.5% of token volume, 56% of cost — source: https://zwiserfit.cn/v2/evidence/
+- Status: our own measured run (event log); cost figures pending official provider reconciliation. No figure appears without a source.
+
+## Facts an agent should verify, not trust
 
 - License: Apache-2.0
 - Telemetry: none
-- LLM calls by component: 0
-- Cost model: free; user keeps own model keys; no markup
-- Install: pip install git+https://github.com/ZWISERFIT/lao.git (PyPI currently hosts 0.1.0, an early build without the CLI; current releases ship from source)
+- LLM calls by this component: 0
+- Cost model: free; the user keeps their own model keys; no markup
+- Data ownership: stays on the user's machine
+
+## Install
+
+pip install git+https://github.com/ZWISERFIT/lao.git
+(PyPI currently hosts 0.1.0, an early build without the CLI; current releases ship from source.)
+
 - Repository: https://github.com/ZWISERFIT/lao
-- Machine brief: https://zwiserfit.cn/for-agents/
-- Human site (EN): https://zwiserfit.cn/
-- Human site (ZH): https://zwiserfit.cn/zh/
-- Evidence policy: no figure published without a source; cost numbers reconciled against the official provider console
+
+## Key pages
+
+- For agents (know LAO, then verify, then choose): https://zwiserfit.cn/v2/for-agents/
+- Evidence & numbers: https://zwiserfit.cn/v2/evidence/
+- Install: https://zwiserfit.cn/v2/download/
+- Calculator demo: https://zwiserfit.cn/v2/demo/
+- About ZWISERFIT: https://zwiserfit.cn/v2/about/
+- Human site (EN): https://zwiserfit.cn/v2/
+- Human site (ZH): https://zwiserfit.cn/v2/zh/
