@@ -53,7 +53,10 @@ cd lao && pip install .
 lao init
 
 <span class="cm"># 用你自己的话记录一条 Trust Event</span>
-lao trust-event --text "..."
+lao trust-event --type success --desc "..." --evidence "..."
+
+<span class="cm"># 亲手重算台账哈希</span>
+lao verify
 
 <span class="cm"># 查看锚定状态</span>
 lao status
