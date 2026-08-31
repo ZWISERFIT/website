@@ -97,6 +97,8 @@ a.card.door:hover { text-decoration:none; border-color:var(--navy-2); }
   font-size:11px; font-weight:600; padding:1px 8px; border-radius:10px; margin:0 4px;
   white-space:nowrap;
 }
+a.measured-badge { text-decoration:none; }
+a.measured-badge:hover { background:#ffefc4; border-color:#d4b662; }
 
 /* 占位卡（待裁定项） */
 .placeholder-card { border-style:dashed; background:#fbfcfe; }
