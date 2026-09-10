@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Experience Catalog v0.1 — the registry | ZWISERFIT</title>
+<meta name="description" content="The LAO Experience Catalog: a Protocol-conformant registry for Experience registration, discovery, retrieval, attestation, and authorization enforcement.">
+<link rel="stylesheet" href="../css/site.css">
+<link rel="icon" type="image/png" href="../img/logo.png">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="brand"><img src="../img/logo.png" alt="ZWISERFIT logo">ZWISERFIT</div>
+  <div class="links">
+    <a href="../">Home</a>
+    <a href="../start-here/">Start Here</a>
+    <a href="../lao/">LAO</a>
+    <a href="../experience/">Experience</a>
+    <a href="../experience-protocol/">Protocol</a>
+    <a href="../experience-catalog/">Catalog</a>
+    <a href="../evidence/">Evidence</a>
+    <a href="../for-agents/">For Agents</a>
+    <a href="../for-investors/">For Investors</a>
+    <a href="../about/">About</a>
+  </div>
+</nav>
+
+<header class="hero" style="padding:56px 24px 48px;">
+  <p style="font-size:14px; opacity:.7; margin-bottom:8px;">&larr; <a href="../start-here/" style="color:inherit;">Start Here</a> &middot; This is Step 6b: The Registry</p>
+  <h1>Experience <span class="dot">Catalog</span> v0.1</h1>
+  <p class="sub">A Protocol-conformant registry for Experience. Not a marketplace. Not a platform. An index and access enforcement layer.</p>
+  <p class="tag">SQLite · FastAPI · 6 endpoints · 74/74 smoke tests passed</p>
+</header>
+
+<!-- WHAT THE CATALOG IS -->
+<section class="section">
+  <h2>What the Catalog does</h2>
+  <div class="rule"></div>
+  <p class="lead">The Catalog is the instantiation of the Protocol — the actual registry where Experience objects are stored, discovered, and retrieved. It enforces lifecycle, authorization, and fingerprint integrity.</p>
+  <div class="grid">
+    <div class="card">
+      <h3>① Registration</h3>
+      <p><code>POST /v1/experiences</code> — Register a new Experience. Validates schema, computes fingerprint (LAO-FP-v1), enforces publish prerequisites.</p>
+    </div>
+    <div class="card">
+      <h3>② Discovery</h3>
+      <p><code>GET /v1/experiences</code> — Discover Experience objects by domain, outcome, lifecycle, authorization, tags.</p>
+    </div>
+    <div class="card">
+      <h3>③ Retrieval</h3>
+      <p><code>GET /v1/experiences/{id}</code> — Retrieve a specific Experience with full canonical JSON, fingerprint, and verification attestations.</p>
+    </div>
+    <div class="card">
+      <h3>④ Lifecycle</h3>
+      <p><code>PATCH /v1/experiences/{id}</code> — Transition lifecycle: draft → published → retired. Enforces valid transitions.</p>
+    </div>
+    <div class="card">
+      <h3>⑤ Attestation</h3>
+      <p><code>POST /v1/experiences/{id}/attestations</code> — Submit verification attestation. Append-only.</p>
+    </div>
+    <div class="card">
+      <h3>⑥ Authorization</h3>
+      <p><code>PATCH /v1/experiences/{id}/consumers</code> — Update allowed consumers for shared Experiences.</p>
+    </div>
+  </div>
+</section>
+
+<!-- IMPLEMENTATION STATUS -->
+<section class="section">
+  <h2>Implementation status</h2>
+  <div class="rule"></div>
+  <div class="grid" style="grid-template-columns: 1fr 1fr;">
+    <div class="card">
+      <h3><span class="status live">TODAY — implemented and tested</span></h3>
+      <ul class="facts">
+        <li>SQLite database layer: <code>db.py</code> (702 lines)</li>
+        <li>FastAPI application: <code>app.py</code> (435 lines)</li>
+        <li>OpenAPI 3.0 specification: <code>openapi.yaml</code> (864 lines)</li>
+        <li>74/74 smoke tests passed</li>
+        <li>Python reference client (independent)</li>
+        <li>TypeScript reference client (independent)</li>
+        <li>29/29 cross-language interop tests passed</li>
+        <li>LAO-FP-v1 fingerprint: cross-language deterministic</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3><span class="status" style="background:#fef7e0; color:#b06000; padding:2px 8px; border-radius:3px;">NOT YET — Runtime integration</span></h3>
+      <ul class="facts">
+        <li>Runtime &rarr; Protocol adapter (NEXT &mdash; constraint injection proven 16/16)</li>
+        <li>Catalog HTTP client in Runtime (NEXT)</li>
+        <li>Catalog &rarr; Runtime reuse path (NEXT)</li>
+        <li>Runtime produces Protocol Experience objects</li>
+        <li>Runtime registers Experience in Catalog</li>
+        <li>Runtime retrieves Experience from Catalog</li>
+      </ul>
+      <p style="margin-top:12px; font-size:14px;">The Catalog is a working registry. The constraint injection path is proven (16/16 tests). The full Experience adapter is the next task.</p>
+      <p style="font-size:14px;"><a href="../experience-protocol/">Read the Protocol specification &rarr;</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT THIS PROVES -->
+<section class="section">
+  <h2>What this proves and what it does not</h2>
+  <div class="rule"></div>
+  <div class="grid" style="grid-template-columns: 1fr 1fr;">
+    <div class="card">
+      <h3>What this proves</h3>
+      <ul class="facts">
+        <li>The Protocol is implementable by independent parties</li>
+        <li>Cross-language fingerprint consistency is achievable</li>
+        <li>The Catalog can register, discover, retrieve, attest, and authorize Experience</li>
+        <li>The Frozen Specification is sufficient for third-party implementation</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>What this does NOT prove</h3>
+      <ul class="facts">
+        <li>That the Runtime currently produces Protocol Experience (it does not)</li>
+        <li>That Experience is stored in the Catalog from production (it is not)</li>
+        <li>That Agents retrieve and reuse Catalog Experience (they do not)</li>
+        <li>That this is a production marketplace (it is a reference implementation)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CLAIM-LEVEL STATUS -->
+<section class="section">
+  <h2>Claim-level status</h2>
+  <div class="rule"></div>
+  <table>
+    <thead><tr><th>Claim</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td>Catalog v0.1 implementation exists (6 endpoints)</td><td><span class="status live">TODAY</span></td></tr>
+      <tr><td>OpenAPI 3.0 specification generated</td><td><span class="status live">TODAY</span></td></tr>
+      <tr><td>74/74 smoke tests passed</td><td><span class="status live">TODAY</span></td></tr>
+      <tr><td>29/29 cross-language interop tests passed</td><td><span class="status live">TODAY</span></td></tr>
+      <tr><td>Runtime registers Experience in Catalog</td><td><span class="status" style="background:#e8f4fd; color:#1a73e8; padding:2px 8px; border-radius:3px; font-size:12px;">NEXT</span> &mdash; constraint injection proven 16/16; full adapter pending</td></tr>
+      <tr><td>Runtime retrieves and reuses Catalog Experience</td><td><span class="status" style="background:#e8f4fd; color:#1a73e8; padding:2px 8px; border-radius:3px; font-size:12px;">NEXT</span> &mdash; constraint injection proven 16/16; full adapter pending</td></tr>
+      <tr><td>Public Catalog browsing interface</td><td><span class="status" style="background:#e8f4fd; color:#1a73e8; padding:2px 8px; border-radius:3px; font-size:12px;">NEXT</span></td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- WHY THIS MATTERS -->
+<section class="section">
+  <h2>Why the Catalog matters for Agent reliability</h2>
+  <div class="rule"></div>
+  <p class="lead">The Catalog is where Experience becomes shareable. Without it, every Agent's Experience is trapped in its own session. With it, verified Experience can be discovered, retrieved, and reused &mdash; making Agents reliably better over time.</p>
+  <div class="grid" style="grid-template-columns: 1fr;">
+    <div class="card" style="text-align:center;">
+      <p style="margin:0;"><a href="../experience-protocol/">Protocol</a> defines the rules &rarr; Catalog enforces the rules &rarr; <a href="../reliable-agent/">Agents benefit from the rules</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- NEXT STEP -->
+<section class="section" style="text-align:center; padding:32px 24px 48px;">
+  <p style="font-size:16px;">This is the technical registry. Want to see what it enables for Agent behavior?</p>
+  <p style="margin-top:12px;"><a class="btn red" href="../reliable-agent/">Next: Reliable Agent &mdash; how Experience creates reliability &rarr;</a></p>
+  <p style="margin-top:16px; font-size:14px; opacity:.7;">
+    <a href="../experience-protocol/">&larr; Protocol</a> &middot;
+    <span><b>Catalog (you are here)</b></span> &middot;
+    <a href="../evidence/">Evidence &rarr;</a> &middot;
+    <a href="../reliable-agent/">Reliable Agent &rarr;</a>
+  </p>
+</section>
+
+<div class="footer">
+  <p><b>ZWISERFIT</b> &middot; The Protocol defines what Experience is. The Catalog stores it. The Runtime generates it.</p>
+  <p style="margin-top:8px;">
+    <a href="../experience-protocol/">Read the Protocol &rarr;</a> &middot;
+    <a href="../reliable-agent/">What this produces &rarr;</a> &middot;
+    <a href="../evidence/">See the evidence &rarr;</a> &middot;
+    <a href="../">Home</a> &middot;
+    &copy; 2026 ZWISERFIT &middot; Apache 2.0
+  </p>
+</div>
+
+</body>
+</html>

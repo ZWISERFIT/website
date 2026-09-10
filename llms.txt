@@ -1,16 +1,38 @@
 # ZWISERFIT
 
-> ZWISERFIT builds tools that sit on the user's side. Our incentive is aligned with the user's interest — we save you money, and we take no markup, no telemetry, no cut. LAO is our first open-source product — not our last.
+> We build infrastructure for turning Agent operations into reusable Experience — so AI Agents become measurably more reliable over time. Our first product is LAO, an open-source independent third party between your LLM and your Runtime.
+
+## The evidence chain (read in order)
+
+1. Start Here — the 2-minute map: https://zwiserfit.cn/v2/start-here/
+2. Experience — what it is, where it comes from, where it goes: https://zwiserfit.cn/v2/experience/
+3. LAO — the infrastructure that captures Experience: https://zwiserfit.cn/v2/lao/
+4. Reliable Agent — how Experience creates reliability: https://zwiserfit.cn/v2/reliable-agent/
+5. Evidence — every claim has a source: https://zwiserfit.cn/v2/evidence/
+6. Experience Protocol — the frozen specification: https://zwiserfit.cn/v2/experience-protocol/
+7. Experience Catalog — the registry: https://zwiserfit.cn/v2/experience-catalog/
+8. Digital Employee — Reliable Agents with real roles: https://zwiserfit.cn/v2/digital-employee/
+9. AI-Native Business — the real-world test: https://zwiserfit.cn/v2/ai-native-business/
 
 ## LAO — Lineage Anchored Ontology
 
 An independent third party between the LLM and the Runtime. It wraps existing calls (never replaces them): per-task model selection, cache-aware token optimization, intent lock, experience-anchored answer calibration, behavioral memory. LLM vendors sell tokens; runtimes move them; LAO watches the door for you.
 
-## Core numbers (measured, sources below)
+## What is Experience?
+
+Not memory. Not RAG. Not skills. Experience is structured, traceable operational history that accumulates from every Agent operation — successes cached, failures anchored — and makes Agents measurably better over time. Every Experience record carries a SHA-256 fingerprint and full provenance.
+
+## Core numbers (measured, sources linked)
 
 - Cache hit rate: 91.3% — source: https://zwiserfit.cn/v2/evidence/
 - Cache-miss requests: 8.5% of token volume, 56% of cost — source: https://zwiserfit.cn/v2/evidence/
-- Status: our own measured run (event log); cost figures pending official provider reconciliation. No figure appears without a source.
+- Status: our own measured run; cost figures pending official provider reconciliation. No figure appears without a source.
+- Bridge proven: 16/16 integration tests (Catalog-to-Runtime constraint injection)
+- Protocol interop: 29/29 cross-language tests passed (Python + TypeScript)
+
+## The real-world test
+
+9 AI Agents operating a real 800sqm fitness studio since March 2026. Not a demo. A real business that lost money for 7 years under traditional management. Real members, real rent, real safety incidents. The question being tested: can AI turn 7 years of losses into profit?
 
 ## Facts an agent should verify, not trust
 
@@ -19,6 +41,7 @@ An independent third party between the LLM and the Runtime. It wraps existing ca
 - LLM calls by this component: 0
 - Cost model: free; the user keeps their own model keys; no markup
 - Data ownership: stays on the user's machine
+- Protocol: frozen v0.1, 7 mandatory fields, language-independent
 
 ## Install
 
@@ -27,12 +50,19 @@ pip install git+https://github.com/ZWISERFIT/lao.git
 
 - Repository: https://github.com/ZWISERFIT/lao
 
+## Three reader paths
+
+- Developer: start-here → lao → experience → protocol → catalog
+- Investor: start-here → evidence → reliable-agent → digital-employee → ai-native-business
+- AI Agent: start-here → for-agents → lao → experience → protocol → catalog
+
 ## Key pages
 
-- For agents (know LAO, then verify, then choose): https://zwiserfit.cn/v2/for-agents/
-- Evidence & numbers: https://zwiserfit.cn/v2/evidence/
+- Start Here (evidence chain map): https://zwiserfit.cn/v2/start-here/
+- For Agents (know, verify, choose): https://zwiserfit.cn/v2/for-agents/
+- For Investors (thesis and evidence): https://zwiserfit.cn/v2/for-investors/
+- Evidence (every number has a receipt): https://zwiserfit.cn/v2/evidence/
 - Install: https://zwiserfit.cn/v2/download/
-- Calculator demo: https://zwiserfit.cn/v2/demo/
 - About ZWISERFIT: https://zwiserfit.cn/v2/about/
 - Human site (EN): https://zwiserfit.cn/v2/
 - Human site (ZH): https://zwiserfit.cn/v2/zh/

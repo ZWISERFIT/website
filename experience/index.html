@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Experience — the missing layer between intelligence and reliability | ZWISERFIT</title>
+<meta name="description" content="Experience is not context, memory, or RAG. It is structured, traceable operational history with provenance, verification status, authorization/control metadata, and reuse potential. Learn why Experience is the key to reliable AI Agents.">
+<link rel="stylesheet" href="../css/site.css">
+<link rel="icon" type="image/png" href="../img/logo.png">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="brand"><img src="../img/logo.png" alt="ZWISERFIT logo">ZWISERFIT</div>
+  <div class="links">
+    <a href="../">Home</a>
+    <a href="../start-here/">Start Here</a>
+    <a href="../lao/">LAO</a>
+    <a href="../experience/">Experience</a>
+    <a href="../evidence/">Evidence</a>
+    <a href="../for-agents/">For Agents</a>
+    <a href="../for-investors/">For Investors</a>
+    <a href="../about/">About</a>
+    <a class="lang" href="../zh/experience/">中文</a>
+  </div>
+</nav>
+
+<p style="text-align:center; font-size:13px; opacity:.5; margin:8px 0 0;">&larr; <a href="../start-here/">Start Here</a> &middot; This is Step 2: The Missing Layer</p>
+
+<header class="hero" style="padding:56px 24px 48px;">
+  <h1>Experience — <span class="dot">the missing layer.</span></h1>
+  <p class="sub">AI Agents are intelligent but unreliable. The gap is not intelligence. The gap is Experience — structured, traceable operational history that accumulates, carries provenance, and makes Agents better over time.</p>
+</header>
+
+<!-- THE PROBLEM -->
+<section class="section">
+  <h2>Why existing approaches are not enough</h2>
+  <div class="rule"></div>
+  <p class="lead">The industry has built sophisticated mechanisms for giving Agents access to information. None of them solve the reliability problem — because none of them produce Experience.</p>
+  <div class="grid">
+    <div class="card">
+      <h3>Context window</h3>
+      <p>The conversation currently in progress. Powerful but <b>ephemeral</b> — it disappears when the session ends. No lineage. No persistence across sessions. No verification of what was learned.</p>
+      <p><b>Limitation:</b> Every session starts blank.</p>
+    </div>
+    <div class="card">
+      <h3>Memory</h3>
+      <p>Stored information for retrieval across sessions. Solves persistence but <b>does not inherently provide operational provenance</b>, verification semantics, or authorization/control semantics. Memory systems typically store everything without distinguishing operational truth from noise.</p>
+      <p><b>Limitation:</b> Does not inherently provide lineage tracking, verification of correctness, or control/authorization mechanisms.</p>
+    </div>
+    <div class="card">
+      <h3>RAG (Retrieval-Augmented Generation)</h3>
+      <p>External documents retrieved to ground responses. Solves knowledge access but <b>does not inherently represent the operational history that generated an Agent's behavior</b>. RAG retrieves pre-existing documents, not lessons learned from real operations. It does not inherently provide Experience-level lineage and verification semantics.</p>
+      <p><b>Limitation:</b> External knowledge, not operational experience. No generation lineage. No verification semantics.</p>
+    </div>
+    <div class="card">
+      <h3>Skills / Fine-tuning</h3>
+      <p>Predefined capabilities baked into model weights. Solves capability but <b>is not inherently generated from real operational history</b> or accompanied by per-operation Experience lineage. No inherent authorization/control mechanism.</p>
+      <p><b>Limitation:</b> Not generated from your operations. No per-operation traceability. No auditability.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT EXPERIENCE IS -->
+<section class="section">
+  <h2>What Experience actually is</h2>
+  <div class="rule"></div>
+  <p class="lead">Experience is <b>structured, traceable operational history</b> — generated from real Agent operations, carrying provenance, verification status, and authorization/control metadata, and reusable across sessions.</p>
+  <div class="grid">
+    <div class="card">
+      <h3>🔗 Lineage</h3>
+      <p>Every Experience records <b>where it came from</b>: which operation, which Agent, which model, which task, what outcome. Nothing enters the Experience pool without a traceable origin.</p>
+    </div>
+    <div class="card">
+      <h3>🔒 Verification</h3>
+      <p>Every Experience carries a <b>SHA-256 fingerprint</b> and founder approval. It is not a raw log — it is a structured, reviewed record of what happened and what was learned.</p>
+    </div>
+    <div class="card">
+      <h3>🔐 Authorization / Control</h3>
+      <p>Experience carries <b>authorization and control metadata</b> — who can access it, what can be reused, under what conditions. This metadata layer is what eventually enables user control in the behavioral asset chain — but ownership and rights are handled separately, downstream from Experience itself.</p>
+    </div>
+    <div class="card">
+      <h3>♻️ Reusability</h3>
+      <p>Experience is <b>structured for reuse</b>: classified by event domain, property labels, and output destination. It can be matched to new operations — not as undifferentiated data, but as targeted, categorized knowledge.</p>
+    </div>
+  </div>
+</section>
+
+<!-- THREE TYPES -->
+<section class="section">
+  <h2>Three types of Experience</h2>
+  <div class="rule"></div>
+  <p class="lead">Not all Experience is the same. The Protocol defines three distinct categories, each with different generation mechanisms and governance rules.</p>
+  <div class="grid">
+    <div class="card">
+      <h3>① Agent Operations Experience</h3>
+      <p>Generated by the Agent's own operational loop:</p>
+      <p style="font-family:monospace; font-size:13px; background:#f5f5f5; padding:8px; border-radius:4px;">Runtime → LAO → LLM → LAO → Runtime</p>
+      <p>Every task the Agent performs, every failure it encounters, every recovery it executes — these generate operational Experience. Used to improve Agent operation: routing decisions, error prevention, cost optimization.</p>
+      <p><span class="status" style="background:#e8f4fd; color:#1a73e8; padding:2px 8px; border-radius:3px; font-size:12px;">TODAY — generated by LAO operations</span></p>
+    </div>
+    <div class="card">
+      <h3>② User Personal Experience</h3>
+      <p>Generated from the user's own behavior and operations. Controlled entirely by the user. This is the category that eventually connects to the behavioral asset thesis — your operational patterns, your preferences, your accumulated know-how.</p>
+      <p><span class="status" style="background:#e8f4fd; color:#1a73e8; padding:2px 8px; border-radius:3px; font-size:12px;">TODAY — concept defined · NEXT — formal user control mechanisms</span></p>
+    </div>
+    <div class="card">
+      <h3>③ Human-Agent Collaboration Experience</h3>
+      <p>Generated through human + Agent collaboration. Subject to authorization and rights agreements. When a human and an Agent work together, the resulting Experience carries shared provenance — both human contribution and Agent operation are recorded.</p>
+      <p><span class="status" style="background:#fef7e0; color:#b06000; padding:2px 8px; border-radius:3px; font-size:12px;">NEXT — design phase</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- HOW EXPERIENCE IS GENERATED -->
+<section class="section">
+  <h2>How Experience is generated and governed</h2>
+  <div class="rule"></div>
+  <div class="grid" style="grid-template-columns: 1fr 1fr;">
+    <div class="card">
+      <h3>The Experience Protocol</h3>
+      <p>Defines <b>what an Experience IS</b>: its structure, its fields, its verification requirements, its ownership model. The Protocol is the specification — the rules that all Experience must conform to.</p>
+      <p><span class="status" style="background:#e8f4fd; color:#1a73e8; padding:2px 8px; border-radius:3px; font-size:12px;">TODAY — specification defined · NEXT — public publication</span></p>
+      <p><a href="../experience-protocol/">Read the Protocol →</a></p>
+    </div>
+    <div class="card">
+      <h3>The Experience Catalog</h3>
+      <p>Contains <b>actual Experience records</b>: structured, verified, fingerprinted. The Catalog is the instantiation — the real Experience that has been generated from real operations.</p>
+      <p><span class="status" style="background:#e8f4fd; color:#1a73e8; padding:2px 8px; border-radius:3px; font-size:12px;">TODAY — initial catalog generated · NEXT — public browsing interface</span></p>
+      <p><a href="../experience-catalog/">Browse the Catalog →</a></p>
+    </div>
+  </div>
+  <div class="card" style="margin-top:16px;">
+    <h3>LAO — the Experience generator</h3>
+    <p>LAO is the infrastructure that <b>captures, anchors, verifies and reuses</b> Agent Experience. Every request that passes through LAO has the potential to generate Experience — successful patterns are cached, failures are documented, and both become reusable.</p>
+    <p>LAO does not claim that every operation automatically becomes a verified Experience. The process requires verification, review, and fingerprinting. What LAO provides is the <b>infrastructure</b> for this process to happen.</p>
+    <p><a href="../lao/">See how LAO works →</a></p>
+  </div>
+</section>
+
+<!-- WHERE EXPERIENCE COMES FROM -->
+<section class="section">
+  <h2>Where Experience comes from</h2>
+  <div class="rule"></div>
+  <p class="lead">Experience does not appear by magic. It is generated by <b>LAO</b> — our open-source infrastructure — from every operation that passes through it.</p>
+  <div class="card" style="max-width:640px; margin:0 auto;">
+    <p style="text-align:center; font-family:monospace; font-size:14px; line-height:2;">
+      Agent task &rarr; <b>LAO</b> picks model &rarr; LLM responds &rarr; <b>LAO</b> captures outcome<br>
+      &darr;<br>
+      Success pattern cached &middot; Failure pattern anchored &middot; Both become <b>Experience</b>
+    </p>
+  </div>
+  <p style="text-align:center; margin-top:12px;">Every failure becomes a defense line. Every success becomes a reusable pattern. <a href="../lao/">See how LAO captures Experience &rarr;</a></p>
+</section>
+
+<!-- WHERE EXPERIENCE GOES -->
+<section class="section">
+  <h2>Where Experience goes</h2>
+  <div class="rule"></div>
+  <p class="lead">Captured Experience does not sit idle. It flows through a chain that turns operational data into measurable reliability.</p>
+  <div style="max-width:640px; margin:0 auto;">
+    <div class="card" style="margin-bottom:4px; text-align:center;">
+      <p style="margin:0;"><b>Experience</b> (this page)</p>
+      <p style="margin:4px 0 0; opacity:.6;">&darr; accumulated + verified</p>
+    </div>
+    <div class="card" style="margin-bottom:4px; text-align:center;">
+      <p style="margin:0;"><b>Reliable Agent</b> — measurably improving over time</p>
+      <p style="margin:4px 0 0; opacity:.6;">&darr; persistent roles</p>
+    </div>
+    <div class="card" style="margin-bottom:4px; text-align:center;">
+      <p style="margin:0;"><b>Digital Employee</b> — Momo, Saros, Melody</p>
+      <p style="margin:4px 0 0; opacity:.6;">&darr; real business</p>
+    </div>
+    <div class="card" style="text-align:center;">
+      <p style="margin:0;"><b>AI-Native Business</b> — proven in a real fitness studio</p>
+    </div>
+  </div>
+  <p style="text-align:center; margin-top:12px;"><a href="../reliable-agent/">How Experience creates reliability &rarr;</a></p>
+</section>
+
+<!-- WHY THIS MATTERS -->
+<section class="section">
+  <h2>Why Experience changes the equation</h2>
+  <div class="rule"></div>
+  <p class="lead">If Agents can accumulate and reuse verified Experience, they stop starting from scratch. This is the path to reliability.</p>
+  <div class="grid" style="grid-template-columns: 1fr;">
+    <div class="card">
+      <p><b>Without Experience:</b> Every session starts blank. The Agent repeats the same mistakes. Token costs stay high because the same expensive queries are made over and over. The Agent never gets better at your specific workload.</p>
+    </div>
+    <div class="card">
+      <p><b>With Experience:</b> The Agent draws on verified operational history. It knows which approaches worked and which failed. It avoids previously-discovered pitfalls. Its answers are anchored to real operations, not just the LLM's training data. Over time, it measurably improves.</p>
+    </div>
+  </div>
+  <p style="margin-top:16px;">This is not a claim that Experience automatically produces reliable Agents. It is a <b>hypothesis being actively validated</b>. The mechanism is clear; the production evidence is being built.</p>
+  <p><a href="../reliable-agent/">How does Experience lead to reliability? &rarr;</a></p>
+</section>
+
+<!-- EVIDENCE ANCHOR -->
+<section class="section">
+  <h2>Proof, not promises</h2>
+  <div class="rule"></div>
+  <p class="lead">We have already generated the first batch of Experience from real operations — a fitness studio running on 9 AI Agents since 2026. Every incident, every failure, every defense is publicly documented.</p>
+  <p style="text-align:center; margin-top:12px;"><a class="btn red" href="../evidence/">See the evidence &rarr;</a></p>
+</section>
+
+<!-- COMPARISON TABLE -->
+<section class="section">
+  <h2>Experience vs. existing approaches</h2>
+  <div class="rule"></div>
+  <table>
+    <thead>
+      <tr>
+        <th>Dimension</th>
+        <th>Context</th>
+        <th>Memory</th>
+        <th>RAG</th>
+        <th>Experience</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Persists across sessions</td>
+        <td>✗</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
+      </tr>
+      <tr>
+        <td>Generated from real operations</td>
+        <td>✓ (current)</td>
+        <td>Partial</td>
+        <td>✗ (pre-existing docs)</td>
+        <td>✓</td>
+      </tr>
+      <tr>
+        <td>Carries lineage / provenance</td>
+        <td>✗</td>
+        <td>Typically ✗</td>
+        <td>Partial (doc source)</td>
+        <td>✓ (per-operation)</td>
+      </tr>
+      <tr>
+        <td>Verification / fingerprinting</td>
+        <td>✗</td>
+        <td>✗</td>
+        <td>✗</td>
+        <td>✓ (SHA-256)</td>
+      </tr>
+      <tr>
+        <td>Authorization / control metadata</td>
+        <td>Vendor-dependent</td>
+        <td>Vendor-dependent</td>
+        <td>Vendor-dependent</td>
+        <td>✓ (per-Experience metadata)</td>
+      </tr>
+      <tr>
+        <td>Withdrawal right</td>
+        <td>✗</td>
+        <td>✗</td>
+        <td>✗</td>
+        <td>✓</td>
+      </tr>
+      <tr>
+        <td>Structured for reuse</td>
+        <td>✗ (raw context)</td>
+        <td>Partial</td>
+        <td>✓ (by document)</td>
+        <td>✓ (by event domain, property, destination)</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<p style="text-align:center; font-size:13px; opacity:.5;">Next: <a href="../lao/">LAO — the infrastructure that captures Experience &rarr;</a></p>
+
+<div class="footer">
+  <p><b>ZWISERFIT</b> · Experience is the bridge between intelligence and reliability — provenance, verification, control</p>
+  <p style="margin-top:8px;">
+    <a href="../experience-protocol/">Protocol</a> ·
+    <a href="../experience-catalog/">Catalog</a> ·
+    <a href="../lao/">LAO</a> ·
+    <a href="../reliable-agent/">Reliable Agent</a> ·
+    <a href="../evidence/">Evidence</a> ·
+    <a href="../">Home</a> ·
+    © 2026 ZWISERFIT · Apache 2.0
+  </p>
+</div>
+
+</body>
+</html>

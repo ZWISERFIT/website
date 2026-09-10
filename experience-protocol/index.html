@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Experience Protocol v0.1 — the specification | ZWISERFIT</title>
+<meta name="description" content="The LAO Experience Protocol v0.1: a frozen, language-independent specification for creating, verifying, publishing and consuming Experience objects.">
+<link rel="stylesheet" href="../css/site.css">
+<link rel="icon" type="image/png" href="../img/logo.png">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="brand"><img src="../img/logo.png" alt="ZWISERFIT logo">ZWISERFIT</div>
+  <div class="links">
+    <a href="../">Home</a>
+    <a href="../start-here/">Start Here</a>
+    <a href="../lao/">LAO</a>
+    <a href="../experience/">Experience</a>
+    <a href="../experience-protocol/">Protocol</a>
+    <a href="../experience-catalog/">Catalog</a>
+    <a href="../evidence/">Evidence</a>
+    <a href="../for-agents/">For Agents</a>
+    <a href="../for-investors/">For Investors</a>
+    <a href="../about/">About</a>
+  </div>
+</nav>
+
+<header class="hero" style="padding:56px 24px 48px;">
+  <p style="font-size:14px; opacity:.7; margin-bottom:8px;">&larr; <a href="../start-here/" style="color:inherit;">Start Here</a> &middot; This is Step 6a: The Specification</p>
+  <h1>Experience <span class="dot">Protocol</span> v0.1</h1>
+  <p class="sub">A frozen, language-independent, runtime-independent specification for Experience objects. The rules that all Experience must conform to.</p>
+  <p class="tag">FROZEN · Version 0.1.0-draft · 2026-09-09</p>
+</header>
+
+<!-- WHAT THE PROTOCOL IS -->
+<section class="section">
+  <h2>What the Protocol defines</h2>
+  <div class="rule"></div>
+  <p class="lead">The Protocol is the specification — the rules that all Experience must conform to. It does not store Experience. It does not serve Experience. It defines what Experience <b>is</b>.</p>
+  <div class="grid">
+    <div class="card">
+      <h3>Experience Object schema</h3>
+      <p>5 required fields: <code>id</code>, <code>content</code>, <code>fingerprint</code>, <code>source</code>, <code>outcome</code>. Plus 2 state fields (<code>lifecycle</code>, <code>authorization</code>), 7 optional fields, and 3 embedded objects.</p>
+    </div>
+    <div class="card">
+      <h3>Provenance &amp; Lineage</h3>
+      <p><b>Provenance</b> answers: where did this Experience come from? <b>Lineage</b> answers: what did this evolve from? Both are embedded in every Experience object.</p>
+    </div>
+    <div class="card">
+      <h3>Verification model</h3>
+      <p>VerificationAttestation records: who verified, by what method, what result, with what evidence. Append-only. Empty or absent = unverified.</p>
+      <p><b>Important:</b> SHA-256 fingerprint detects integrity changes. It does <b>NOT</b> prove the event or outcome was valid.</p>
+    </div>
+    <div class="card">
+      <h3>Authorization model</h3>
+      <p>Three states: <code>private</code>, <code>shared</code> (with allowed consumers), <code>public</code>. Authorization controls who can retrieve, not who owns.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOUR CONCEPTS DISTINCTION -->
+<section class="section">
+  <h2>Four concepts the Protocol keeps strictly separate</h2>
+  <div class="rule"></div>
+  <div class="grid">
+    <div class="card">
+      <h3>Provenance</h3>
+      <p><i>"Where did this Experience come from?"</i></p>
+      <p>Records the origin: producer, process, time, place. Embedded in every Experience.</p>
+    </div>
+    <div class="card">
+      <h3>Verification</h3>
+      <p><i>"Was the event/outcome sufficiently validated?"</i></p>
+      <p>Attestation records with verifier, method, result, evidence. A separate layer from provenance.</p>
+    </div>
+    <div class="card">
+      <h3>Fingerprint</h3>
+      <p><i>"Can we detect integrity changes?"</i></p>
+      <p>LAO-FP-v1: NFC normalize → trim → UTF-8 → SHA-256. Content-only hashing. <b>Does NOT prove validity.</b></p>
+    </div>
+    <div class="card">
+      <h3>Ownership / Rights</h3>
+      <p><i>"Who has claims on this data?"</i></p>
+      <p>Not handled in the Protocol. Ownership and rights belong to the downstream behavioral asset chain.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FIVE ARTIFACTS -->
+<section class="section">
+  <h2>Five normative artifacts</h2>
+  <div class="rule"></div>
+  <p class="lead">The Protocol is not a single document. It is five interdependent artifacts. The Frozen Specification is the sole normative source of truth.</p>
+  <div class="grid">
+    <div class="card">
+      <h3>① Frozen Specification</h3>
+      <p><code>experience-protocol-v0.1.md</code> — 1,249 lines. 17 normative sections. The ultimate authority.</p>
+      <p><span class="status live">TODAY — frozen</span></p>
+    </div>
+    <div class="card">
+      <h3>② JSON Schema</h3>
+      <p><code>experience.schema.json</code> — 229 lines. Machine-readable validation for all fields, enums, formats.</p>
+      <p><span class="status live">TODAY — frozen</span></p>
+    </div>
+    <div class="card">
+      <h3>③ Python Reference Implementation</h3>
+      <p>Independent provider/consumer library. Depends only on the Frozen Protocol and Schema.</p>
+      <p><span class="status live">TODAY — verified</span></p>
+    </div>
+    <div class="card">
+      <h3>④ TypeScript Reference Implementation</h3>
+      <p>Independent provider/consumer library. Same constraints as Python.</p>
+      <p><span class="status live">TODAY — verified</span></p>
+    </div>
+    <div class="card">
+      <h3>⑤ Interoperability Test Suite</h3>
+      <p>29 tests: cross-language fingerprint consistency, bidirectional registration/retrieval, cross-language attestation, unified error contract.</p>
+      <p><span class="status live">TODAY — 29/29 passed</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- PROTOCOL VS RUNTIME -->
+<section class="section">
+  <h2>Protocol vs Runtime: current integration status</h2>
+  <div class="rule"></div>
+  <p class="lead">The Protocol is a complete specification. The Runtime integration is not yet built. This is an honest status report.</p>
+  <table>
+    <thead>
+      <tr><th>Capability</th><th>Protocol</th><th>Runtime</th><th>Bridge</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Experience generation</td><td>Schema defined</td><td>Pipeline B active (produces Anchors)</td><td style="color:#e67e22;">PARTIAL &mdash; constraint injection proven (16/16); full Anchor&rarr;Experience adapter is NEXT</td></tr>
+      <tr><td>Experience registration</td><td>Provider Contract defined</td><td>N/A</td><td style="color:#e67e22;">NEXT &mdash; Catalog HTTP client defined, Runtime integration pending</td></tr>
+      <tr><td>Experience retrieval</td><td>Consumer Contract defined</td><td>N/A</td><td style="color:#e67e22;">NEXT &mdash; Catalog HTTP client defined, Runtime integration pending</td></tr>
+      <tr><td>Experience reuse</td><td>Out of scope</td><td>Anchor-based reuse works</td><td style="color:#e67e22;">NEXT &mdash; anchor reuse works; Protocol-compatible reuse pending</td></tr>
+      <tr><td>Fingerprint</td><td>LAO-FP-v1 defined</td><td>4 different algorithms</td><td style="color:#e67e22;">NEXT &mdash; none is LAO-FP-v1 yet</td></tr>
+      <tr><td>Cross-language interop</td><td>29/29 tests passed</td><td>Python only</td><td style="color:#e67e22;">NEXT &mdash; Runtime not integrated</td></tr>
+    </tbody>
+  </table>
+  <p style="margin-top:12px; font-size:14px;">The Protocol is ready. The constraint injection path is proven (16/16 tests). The full Anchor&rarr;Experience adapter is the next engineering task.</p>
+  <p style="margin-top:8px; font-size:14px;"><a href="../experience-catalog/">See how the Catalog instantiates these rules &rarr;</a></p>
+</section>
+
+<!-- CLAIM-LEVEL STATUS -->
+<section class="section">
+  <h2>Claim-level status</h2>
+  <div class="rule"></div>
+  <table>
+    <thead><tr><th>Claim</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td>Protocol v0.1 Frozen Specification exists</td><td><span class="status live">TODAY</span></td></tr>
+      <tr><td>JSON Schema defined and frozen</td><td><span class="status live">TODAY</span></td></tr>
+      <tr><td>Python + TypeScript reference implementations exist</td><td><span class="status live">TODAY</span></td></tr>
+      <tr><td>Cross-language interoperability verified (29/29)</td><td><span class="status live">TODAY</span></td></tr>
+      <tr><td>Runtime produces Protocol-conformant Experience</td><td><span class="status" style="background:#e8f4fd; color:#1a73e8; padding:2px 8px; border-radius:3px; font-size:12px;">NEXT</span> &mdash; constraint injection proven 16/16; full adapter pending</td></tr>
+      <tr><td>Runtime registers/retrieves from Catalog</td><td><span class="status" style="background:#e8f4fd; color:#1a73e8; padding:2px 8px; border-radius:3px; font-size:12px;">NEXT</span> &mdash; constraint injection proven 16/16; full adapter pending</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- WHY THIS MATTERS -->
+<section class="section">
+  <h2>Why the Protocol matters for Agent reliability</h2>
+  <div class="rule"></div>
+  <p class="lead">Without a shared specification, every Agent defines "Experience" differently. Experience that one Agent produces cannot be understood by another. The Protocol makes Experience interoperable &mdash; across Agents, across languages, across organizations.</p>
+  <div class="grid" style="grid-template-columns: 1fr;">
+    <div class="card" style="text-align:center;">
+      <p style="margin:0;">Protocol defines the rules &rarr; <a href="../experience-catalog/">Catalog enforces the rules</a> &rarr; <a href="../reliable-agent/">Agents benefit from the rules</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- NEXT STEP -->
+<section class="section" style="text-align:center; padding:32px 24px 48px;">
+  <p style="font-size:16px;">This is the technical specification. Want to see what it enables for Agent behavior?</p>
+  <p style="margin-top:12px;"><a class="btn red" href="../reliable-agent/">Next: Reliable Agent &mdash; how Experience creates reliability &rarr;</a></p>
+  <p style="margin-top:16px; font-size:14px; opacity:.7;">
+    <a href="../experience-protocol/">Protocol (you are here)</a> &middot;
+    <a href="../experience-catalog/">Catalog &rarr;</a> &middot;
+    <a href="../evidence/">Evidence &rarr;</a>
+  </p>
+</section>
+
+<div class="footer">
+  <p><b>ZWISERFIT</b> &middot; The Protocol defines what Experience is. The Catalog stores it. The Runtime generates it.</p>
+  <p style="margin-top:8px;">
+    <a href="../experience/">What is Experience?</a> &middot;
+    <a href="../experience-catalog/">See the Catalog &rarr;</a> &middot;
+    <a href="../reliable-agent/">What this produces &rarr;</a> &middot;
+    <a href="../">Home</a> &middot;
+    &copy; 2026 ZWISERFIT &middot; Apache 2.0
+  </p>
+</div>
+
+</body>
+</html>
