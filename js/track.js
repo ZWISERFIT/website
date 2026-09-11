@@ -118,6 +118,16 @@
       return;
     }
 
+    // Asset category click (market page)
+    var trackType = link.getAttribute('data-track');
+    if (trackType === 'asset_category_click') {
+      send('asset_category_click', {
+        category: link.getAttribute('data-category') || 'unknown',
+        href: link.getAttribute('href')
+      });
+      return;
+    }
+
     // Install button click
     if (link.classList.contains('btn') && link.getAttribute('href') &&
         link.getAttribute('href').indexOf('download') !== -1) {

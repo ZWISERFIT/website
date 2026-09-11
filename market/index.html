@@ -3,32 +3,48 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Confirmed Experience Assets —Your know-how can be owned | LAO</title>
-<meta name="description" content="20 experience assets confirmed and dual-library ingested from real production runs —17 on public display. Extract, confirm, ingest: know-how becomes an owned asset. Display and education only; no live trading in this stage.">
+<title>Experience Market — Confirmed Assets | ZWISERFIT</title>
+<meta name="description" content="20 confirmed experience assets from real production runs. Browse by category.">
 <link rel="stylesheet" href="../css/site.css">
 <link rel="icon" type="image/png" href="../img/logo.png">
 <style>
-details.asset-card {
-  margin: 12px 0;
-  border: 1px solid rgba(0,0,0,.1);
-  border-radius: 8px;
-  overflow: hidden;
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
 }
-details.asset-card summary {
-  padding: 14px 18px;
+@media (max-width: 600px) {
+  .category-grid { grid-template-columns: 1fr; }
+}
+.category-card {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 12px;
+  padding: 28px 24px;
   cursor: pointer;
-  font-weight: 600;
-  background: rgba(0,0,0,.02);
-  list-style: none;
+  transition: transform 0.15s, box-shadow 0.15s;
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
-details.asset-card summary::-webkit-details-marker { display: none; }
-details.asset-card summary::before {
-  content: "▶ ";
+.category-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0,0,0,.08);
+}
+.category-card .cat-icon { font-size: 32px; margin-bottom: 12px; }
+.category-card h3 { margin: 0 0 8px; font-size: 18px; }
+.category-card p { margin: 0; font-size: 14px; opacity: .7; line-height: 1.5; }
+.category-card .cat-count {
   display: inline-block;
-  transition: transform 0.2s;
+  margin-top: 12px;
+  font-size: 12px;
+  padding: 3px 10px;
+  background: rgba(0,0,0,.04);
+  border-radius: 20px;
+  opacity: .6;
 }
-details.asset-card[open] summary::before { transform: rotate(90deg); }
-details.asset-card .card-content { padding: 0 18px 18px; }
 </style>
 </head>
 <body>
@@ -44,176 +60,82 @@ details.asset-card .card-content { padding: 0 18px 18px; }
 </nav>
 
 <header class="hero" style="padding:56px 24px 48px;">
-  <h1>Your <span class="dot">know-how</span> can be confirmed.</h1>
-  <p class="sub">20 experience assets from real production runs. 17 on public display.</p>
-  <p class="tag">Display &amp; education only —no live trading</p>
+  <h1>Experience <span class="dot">Market</span></h1>
+  <p class="sub">20 confirmed assets from real production runs. Browse by category.</p>
+  <p class="tag">Display &amp; education only &mdash; no live trading</p>
 </header>
 
 <section class="section">
-  <h2>How know-how becomes a confirmed asset —three steps</h2>
+  <h2>How know-how becomes a confirmed asset</h2>
   <div class="rule"></div>
   <div class="grid">
     <div class="card">
-      <h3>① Extract</h3>
-      <p>Settled out of real work: an agent's real production run leaves evidence, and the reusable lesson is extracted from that evidence —nothing invented, nothing padded.</p>
+      <h3>&emsp;Extract</h3>
+      <p>Settled out of real work: an agent's production run leaves evidence, and the reusable lesson is extracted from that evidence.</p>
     </div>
     <div class="card">
-      <h3>② Confirm</h3>
-      <p>Card-by-card review, then the founder signs off in person. Every card carries its own SHA-256 on record; independent verification passed card by card before anything was ingested.</p>
+      <h3>&emsp;Confirm</h3>
+      <p>Card-by-card review, then the founder signs off. Every card carries its own SHA-256 on record.</p>
     </div>
     <div class="card">
-      <h3>③ Ingest</h3>
-      <p>Dual-library ingestion: the authoritative record goes into the library, revenue-share terms are set and on record (personal cards 70/30, collaborative cards 50/50; agents take no cut), and the founder keeps the right to withdraw any card.</p>
+      <h3>&emsp;Ingest</h3>
+      <p>Dual-library ingestion: the authoritative record goes into the library, revenue-share terms are set and on record.</p>
     </div>
   </div>
-  <p class="lead" style="margin-top:18px;">Experience stops being a memory the day it gets a signature and a hash. That is what "your know-how can be owned" means here —and ownership is what makes it worth something.</p>
 </section>
 
 <section class="section">
-  <h2>The 20 confirmed assets —live status</h2>
+  <h2>Browse by category</h2>
   <div class="rule"></div>
-  <p class="lead">Two ingestion rounds, 7 + 13 = 20 cards: <b>2 personal</b>, <b>18 collaborative</b>; <b>17 public-grade</b> shown with a one-line summary, <b>3 internal-grade</b> shown by status only. Every card below carries the two registered fields: <b>Source</b> and <b>Confirmation status</b>.</p>
-  <div class="grid">
-    
+  <p class="lead" style="text-align:center; margin-bottom:32px;">Click a category to explore its assets. Every click tells us what matters to you.</p>
+
+  <div class="category-grid">
+
+    <a class="category-card" href="./category-engineering/" data-category="engineering" data-track="asset_category_click">
+      <div class="cat-icon">&#9881;</div>
+      <h3>Engineering Patterns</h3>
+      <p>Reusable technical patterns: bounded retries, immunity classes, isolation exits, queue diagnostics, defense-line layers.</p>
+      <span class="cat-count">5 assets</span>
+    </a>
+
+    <a class="category-card" href="./category-operations/" data-category="operations" data-track="asset_category_click">
+      <div class="cat-icon">&#9881;</div>
+      <h3>Operations &amp; Deployment</h3>
+      <p>Deployment closure, split observation, data pipeline diagnostics &mdash; the lessons from keeping real systems running.</p>
+      <span class="cat-count">3 assets</span>
+    </a>
+
+    <a class="category-card" href="./category-governance/" data-category="governance" data-track="asset_category_click">
+      <div class="cat-icon">&#9878;</div>
+      <h3>Governance &amp; Trust</h3>
+      <p>Discovery vs disposition, consent boundaries, metric governance, intelligence outlets, independent observation.</p>
+      <span class="cat-count">7 assets</span>
+    </a>
+
+    <a class="category-card" href="./category-data-integrity/" data-category="data-integrity" data-track="asset_category_click">
+      <div class="cat-icon">&#9745;</div>
+      <h3>Data Integrity</h3>
+      <p>Ledger discipline, moving baselines, attribution integrity, state machines &mdash; keeping the numbers honest.</p>
+      <span class="cat-count">5 assets</span>
+    </a>
+
   </div>
-    <div class="card">
-      <h3>CWF-002 · Separation of discovery and disposition: monitors only alert, adjudicators decide the action</h3>
-      <p>Collaborative · <b>internal grade —content not publicly displayed</b></p>
-      <span class="status live">confirmed · dual-library ingested</span>
-    </div>
-    <div class="card">
-      <h3>CWF-003 · From single-point fixes to immunity against the whole class</h3>
-      <p>Separate the specific bug from the failure pattern; old incidents become regression samples, and detection earns its keep by catching a new case it was never tuned for.</p>
-      <p class="status open">Collaborative · public</p>
-      <span class="status live">confirmed · dual-library ingested</span>
-    </div>
-    <div class="card">
-      <h3>CWF-004 · Deployment closure: "changed" is not "in effect"</h3>
-      <p>Probe and back up before changing; after deploying, prove the running process, the version on disk, and the original state. Effect must be proven by the running surface, not by first impressions.</p>
-      <p class="status open">Collaborative · public</p>
-      <span class="status live">confirmed · dual-library ingested</span>
-    </div>
-    <div class="card">
-      <h3>CWF-005 · Retiring mechanisms: let the business loop audit the governance</h3>
-      <p>Personal (founder) · <b>internal grade —content not publicly displayed</b></p>
-      <span class="status live">confirmed · dual-library ingested</span>
-    </div>
-    <div class="card">
-      <h3>CWF-006 · Trust boundary: even a "useful feature" without consent must be blocked —and disclosed</h3>
-      <p>The user's right to know and to withdraw beats growth, telemetry, or convenience. "No harm done yet" does not downgrade the nature of the act —disclose first, before the outside finds out.</p>
-      <p class="status open">Collaborative · public</p>
-      <span class="status live">confirmed · dual-library ingested</span>
-    </div>
-    <div class="card">
-      <h3>CWF-007 · Number reporting: run ledgers for discovery, official ledgers for verdicts</h3>
-      <p>Run logs surface anomalies; every number carries its source and confidence grade, and nothing becomes a financial conclusion before official reconciliation.</p>
-      <p class="status open">Personal (founder) · public</p>
-      <span class="status live">confirmed · dual-library ingested</span>
-    </div>
-    <div class="card">
-      <h3>CWF-008 · Use a moving baseline to catch boiling-frog drift</h3>
-      <p>Rolling baseline plus dual thresholds; alert only on sustained anomaly, then point back to the raw metric. Chronic drift must be visible —without single-point jitter becoming noise.</p>
-      <p class="status open">Collaborative · public</p>
-      <span class="status live">confirmed · dual-library ingested</span>
-    </div>
-    <div class="card">
-      <h3>CWF-009 · Retries must be bounded by both attempt count and total task budget</h3>
-      <p>Failure may be retried, but never drained without limit. Block at either cap, record the reason —an honest block beats a time promise you cannot keep.</p>
-      <p class="status open">Collaborative · public</p>
-      <span class="status live">confirmed · dual-library ingested</span>
-    </div>
-    <div class="card">
-      <h3>CWF-012 · Split deployment and observation shifts —never make the agent wait on standby</h3>
-      <p>Deploy, hand over a verifiable state, stop. Let the server accumulate observations naturally; waiting and polling are cost risks, not work.</p>
-      <p class="status open">Collaborative · public</p>
-      <span class="status live">confirmed · dual-library ingested</span>
-    </div>
-    <div class="card">
-      <h3>CWF-013 · When a system reroutes the user, it must explain, batch, and report</h3>
-      <p>Even a correct auto-optimization must never be silent: every deviation from the user's choice is logged as "original choice →new choice + reason", aggregated, and escalated past a threshold.</p>
-      <p class="status open">Collaborative · public</p>
-      <span class="status live">confirmed · dual-library ingested</span>
-    </div>
-    <div class="card">
-      <h3>CWF-014 · A metric inside the system is not yet a governed metric</h3>
-      <p>A number on a dashboard that triggers no judgment is not a defense line. Give each key metric a threshold with business meaning, wire the alert, and replay history to test it.</p>
-      <p class="status open">Collaborative · public</p>
-      <span class="status live">confirmed · dual-library ingested</span>
-    </div>
-    <div class="card">
-      <h3>CWF-015 · Isolation must have a time exit and a minimum sample bar</h3>
-      <p>Check the minimum sample before convicting; write the expiry into the isolation itself, and let time release it. A protection mechanism must never become a permanent punishment.</p>
-      <p class="status open">Collaborative · public</p>
-      <span class="status live">confirmed · dual-library ingested</span>
-    </div>
-    <div class="card">
-      <h3>CWF-016 · Before quota governance, hold the line on attribution integrity</h3>
-      <p>Collaborative · <b>internal grade —content not publicly displayed</b></p>
-      <span class="status live">confirmed · dual-library ingested</span>
-    </div>
-    <div class="card">
-      <h3>CWF-017 · No data? First ask: no business, or a broken pipeline</h3>
-      <p>Silence is not an automatic error: cross-check process, port, real requests and write ability, and let a minimal probe tell zero traffic from a broken channel. Even a misdiagnosis gets filed.</p>
-      <p class="status open">Collaborative · public</p>
-      <span class="status live">confirmed · dual-library ingested</span>
-    </div>
-    <div class="card">
-      <h3>CWF-018 · A hanging write? Check the shared queue before blaming permissions</h3>
-      <p>When many writes hang at once, look for the shared resource first: read-only queue inspection, find the long-running blocker, unblock with authorization and a minimal write probe —never blind retries.</p>
-      <p class="status open">Collaborative · public</p>
-      <span class="status live">confirmed · dual-library ingested</span>
-    </div>
-    <div class="card">
-      <h3>CWF-019 · Intelligence gets exactly one authoritative outlet</h3>
-      <p>Having alerts but reading them in the wrong place is worse than having none. Raw events may be many; the authoritative alert box is one, and bypass writes must verify down to zero.</p>
-      <p class="status open">Collaborative · public</p>
-      <span class="status live">confirmed · dual-library ingested</span>
-    </div>
-    <div class="card">
-      <h3>CWF-020 · The monitoring system itself must be watched by an independent observer</h3>
-      <p>The monitored must never self-certify health. An external heartbeat checks both data freshness and process state —absence of alerts is not proof of life.</p>
-      <p class="status open">Collaborative · public</p>
-      <span class="status live">confirmed · dual-library ingested</span>
-    </div>
-    <div class="card">
-      <h3>CWF-021 · Authoritative files must carry a state machine</h3>
-      <p>A signature is not the same as implemented. Every rule gets an explicit state —draft, signed, implemented, enforced, revoked —and consumers read by status, never by filename.</p>
-      <p class="status open">Collaborative · public</p>
-      <span class="status live">confirmed · dual-library ingested</span>
-    </div>
-    <div class="card">
-      <h3>CWF-022 · On delivery, say which layer the defense line lives in</h3>
-      <p>"Works in our environment" is not "ships with the product". Label every claimed capability by layer, test the actual artifact, and shrink the claim rather than stretch the promise.</p>
-      <p class="status open">Collaborative · public</p>
-      <span class="status live">confirmed · dual-library ingested</span>
-    </div>
-  </div>
-  <p style="margin-top:18px;"><b>Source (every card):</b> extracted from a real production run of our own agent team —the run record is on file.</p>
-  <p><b>Confirmation status (every card):</b> confirmed —card-by-card review plus the founder's in-person signature, per-card SHA-256 on record, independent verification passed before ingestion.</p>
-  <p style="margin-top:12px;">CWF-010 / CWF-011 were rejected at review and never ingested; they hold no place on this wall. That refusal is part of the standard too.</p>
 </section>
 
-<section class="section">
-  <h2>Where this leads</h2>
-  <div class="rule"></div>
-  <div class="grid">
-    <div class="card placeholder-card">
-      <h3>馃挰 Private community</h3>
-      <p>We are preparing a private circle for people who want to confirm and own their own experience. The door opens soon —the entry link will appear right here.</p>
-    </div>
-    <div class="card">
-      <h3>馃彧 The real market —later</h3>
-      <p>When the marketplace truly opens, it will follow the published build plan —not this showcase wall.</p>
-    </div>
+<section class="section" style="padding:40px 24px;">
+  <div style="max-width:600px; margin:0 auto; text-align:center;">
+    <h3>Want to see the full asset list?</h3>
+    <p style="opacity:.7; margin:8px 0 16px;">The complete evidence chain with SHA-256 hashes is on the Evidence page.</p>
+    <a class="btn" href="/v2/evidence/">View Evidence &rarr;</a>
   </div>
 </section>
 
 <div class="footer">
-  <p><b>ZWISERFIT</b> · LAO · your experience is yours</p>
-  <p style="margin-top:8px;"><a href="../privacy/">Privacy</a> · <a href="../">Home</a> · © 2026 ZWISERFIT · Apache 2.0</p>
+  <p><i>"I hit these holes myself, so you don't have to."</i></p>
+  <p style="margin-top:8px;"><b>ZWISERFIT</b> &middot; LAO is our first open-source product &middot; on the user's side</p>
+  <p style="margin-top:8px;">&copy; 2026 ZWISERFIT &middot; Apache 2.0</p>
 </div>
 
-<script src="../js/track.js"></script>
+<script src="/v2/js/track.js"></script>
 </body>
 </html>
-
