@@ -1,0 +1,37 @@
+{
+  "user_id": "founder",
+  "period_start": "2026-08-10",
+  "period_end": "2026-09-09",
+  "total_requests": 1247,
+  "cache_hits": 1138,
+  "cache_misses": 109,
+  "hit_rate": 91.3,
+  "actual_cost_usd": 8.42,
+  "would_have_cost_usd": 28.07,
+  "saved_usd": 19.65,
+  "saved_percent": 70.0,
+  "tasks_classified": {
+    "ultra_light": 312,
+    "light": 248,
+    "code": 186,
+    "cn_explain": 156,
+    "cn_creative": 124,
+    "medium": 98,
+    "heavy": 62,
+    "reasoning": 61
+  },
+  "budget_degradations": 23,
+  "safety_blocks": 7,
+  "agents_used": {
+    "momo_bridge": 342,
+    "baron": 286,
+    "tristan": 198,
+    "nova": 156,
+    "zeus": 124,
+    "stella": 86,
+    "luna": 55
+  },
+  "top_agent": "momo_bridge",
+  "best_day": "2026-09-01",
+  "best_day_saved_usd": 2.34
+}
