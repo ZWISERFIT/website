@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Engineering Patterns — Experience Market | ZWISERFIT</title>
+<meta name="description" content="5 confirmed engineering pattern assets from real production runs.">
+<link rel="stylesheet" href="/v2/css/site.css">
+<link rel="icon" type="image/png" href="/v2/img/logo.png">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="brand"><img src="/v2/img/logo.png" alt="ZWISERFIT logo">ZWISERFIT</div>
+  <div class="links">
+    <a href="/v2/">Home</a>
+    <a href="/v2/market/">Market</a>
+    <a href="/v2/contact/">Contact</a>
+    <a class="lang" href="/v2/zh/">中文</a>
+  </div>
+</nav>
+
+<header class="hero" style="padding:48px 24px 40px;">
+  <p style="opacity:.6; margin-bottom:8px;"><a href="/v2/market/" style="color:inherit;">&larr; Back to Market</a></p>
+  <h1>&#9881; Engineering <span class="dot">Patterns</span></h1>
+  <p class="sub">5 confirmed assets. Reusable technical patterns from real production runs.</p>
+</header>
+
+<section class="section">
+  <div class="grid" style="max-width:800px; margin:0 auto;">
+
+    <div class="card">
+      <h3>CWF-003 &middot; From single-point fixes to immunity against the whole class</h3>
+      <p>Don't just fix the bug &mdash; build immunity against the entire class of bugs it belongs to.</p>
+    </div>
+
+    <div class="card">
+      <h3>CWF-009 &middot; Retries must be bounded by both attempt count and total task budget</h3>
+      <p>Unbounded retries waste tokens. Bound by count AND total cost ceiling.</p>
+    </div>
+
+    <div class="card">
+      <h3>CWF-015 &middot; Isolation must have a time exit and a minimum sample bar</h3>
+      <p>Quarantining without exit criteria creates zombie states. Set time limits and sample thresholds.</p>
+    </div>
+
+    <div class="card">
+      <h3>CWF-018 &middot; A hanging write? Check the shared queue before blaming permissions</h3>
+      <p>Most "permission denied" errors are actually queue backpressure. Diagnose the queue first.</p>
+    </div>
+
+    <div class="card">
+      <h3>CWF-022 &middot; On delivery, say which layer the defense line lives in</h3>
+      <p>Every defense must declare its layer. Cross-layer defenses create blind spots.</p>
+    </div>
+
+  </div>
+</section>
+
+<div class="footer">
+  <p><i>"I hit these holes myself, so you don't have to."</i></p>
+  <p style="margin-top:8px;"><b>ZWISERFIT</b> &middot; LAO is our first open-source product &middot; on the user's side</p>
+  <p style="margin-top:8px;">&copy; 2026 ZWISERFIT &middot; Apache 2.0</p>
+</div>
+
+<script src="/v2/js/track.js"></script>
+</body>
+</html>
