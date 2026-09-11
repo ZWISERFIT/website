@@ -18,32 +18,41 @@
   // Treasure hunt depth layers
   var DEPTH_MAP = {
     '/': 0,
+    '/v2/': 0,
     '/start-here/': 1,
-    '/for-users/': 1,
-    '/for-agents/': 1,
-    '/for-investors/': 1,
-    '/lao/': 2,
-    '/evidence/': 2,
-    '/download/': 2,
-    '/experience/': 3,
-    '/reliable-agent/': 3,
-    '/digital-employee/': 3,
-    '/experience-protocol/': 4,
-    '/experience-catalog/': 4,
-    '/ai-native-business/': 4,
+    '/know-lao/': 1,
+    '/know-zwiserfit/': 1,
+    '/agent-know/': 1,
+    '/contact/': 1,
+    '/for-users/': 2,
+    '/for-agents/': 2,
+    '/for-investors/': 2,
+    '/lao/': 3,
+    '/evidence/': 3,
+    '/download/': 3,
+    '/experience/': 4,
+    '/reliable-agent/': 4,
+    '/digital-employee/': 4,
+    '/experience-protocol/': 5,
+    '/experience-catalog/': 5,
+    '/ai-native-business/': 5,
     '/market/': 3,
-    '/trust/': 2,
-    '/about/': 2,
-    '/privacy/': 2,
-    '/community/': 2
+    '/trust/': 3,
+    '/about/': 3,
+    '/privacy/': 3,
+    '/community/': 3
   };
 
   // Door target mapping (which path is the user entering)
   var DOOR_TARGETS = {
+    '/know-lao/': 'lao',
+    '/know-zwiserfit/': 'zwiserfit',
+    '/agent-know/': 'agent',
     '/for-users/': 'user',
-    '/for-agents/': 'agent',
+    '/for-agents/': 'agent-detail',
     '/for-investors/': 'investor',
-    '/start-here/': 'dispatcher'
+    '/start-here/': 'dispatcher',
+    '/contact/': 'contact'
   };
 
   function getDepth() {
