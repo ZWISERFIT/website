@@ -7,6 +7,29 @@
 <meta name="description" content="20 experience assets confirmed and dual-library ingested from real production runs —17 on public display. Extract, confirm, ingest: know-how becomes an owned asset. Display and education only; no live trading in this stage.">
 <link rel="stylesheet" href="../css/site.css">
 <link rel="icon" type="image/png" href="../img/logo.png">
+<style>
+details.asset-card {
+  margin: 12px 0;
+  border: 1px solid rgba(0,0,0,.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+details.asset-card summary {
+  padding: 14px 18px;
+  cursor: pointer;
+  font-weight: 600;
+  background: rgba(0,0,0,.02);
+  list-style: none;
+}
+details.asset-card summary::-webkit-details-marker { display: none; }
+details.asset-card summary::before {
+  content: "▶ ";
+  display: inline-block;
+  transition: transform 0.2s;
+}
+details.asset-card[open] summary::before { transform: rotate(90deg); }
+details.asset-card .card-content { padding: 0 18px 18px; }
+</style>
 </head>
 <body>
 
@@ -15,18 +38,15 @@
   <div class="links">
     <a href="/v2/">Home</a>
     <a href="/v2/market/">Market</a>
-    <a href="/v2/evidence/">Evidence</a>
-    <a href="/v2/for-agents/">For Agents</a>
-    <a href="/v2/about/">About</a>
     <a href="/v2/contact/">Contact</a>
     <a class="lang" href="/v2/zh/">中文</a>
   </div>
 </nav>
 
 <header class="hero" style="padding:56px 24px 48px;">
-  <h1>You may not know it yet —<br>your <span class="dot">know-how</span> can be confirmed, and it can pay.</h1>
-  <p class="sub">This wall displays <b>20 experience assets</b> already confirmed and ingested into our dual libraries —every one extracted from a real production run of our own agent team. <b>17</b> are on public display below; <b>3</b> are internal-grade and listed by status only. Look around: the next one on the wall could be yours.</p>
-  <p class="tag">Display &amp; education only —no live trading in this stage</p>
+  <h1>Your <span class="dot">know-how</span> can be confirmed.</h1>
+  <p class="sub">20 experience assets from real production runs. 17 on public display.</p>
+  <p class="tag">Display &amp; education only —no live trading</p>
 </header>
 
 <section class="section">
@@ -54,12 +74,8 @@
   <div class="rule"></div>
   <p class="lead">Two ingestion rounds, 7 + 13 = 20 cards: <b>2 personal</b>, <b>18 collaborative</b>; <b>17 public-grade</b> shown with a one-line summary, <b>3 internal-grade</b> shown by status only. Every card below carries the two registered fields: <b>Source</b> and <b>Confirmation status</b>.</p>
   <div class="grid">
-    <div class="card">
-      <h3>CWF-001 · Production replay: write the criteria first, then correct self-reports with raw evidence</h3>
-      <p>Define rollback conditions and acceptance criteria first; when a script's own account conflicts with the raw logs, the raw logs win. Insufficient evidence stays N/A —never padded into a pass.</p>
-      <p class="status open">Collaborative · public</p>
-      <span class="status live">confirmed · dual-library ingested</span>
-    </div>
+    
+  </div>
     <div class="card">
       <h3>CWF-002 · Separation of discovery and disposition: monitors only alert, adjudicators decide the action</h3>
       <p>Collaborative · <b>internal grade —content not publicly displayed</b></p>
