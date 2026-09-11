@@ -7,6 +7,34 @@
 <meta name="description" content="An AI Digital Employee is not an Agent + memory. It has a persistent role, defined responsibilities, authority, workflow, accumulated experience, evaluation, and escalation paths. Meet Momo, Saros, and Melody.">
 <link rel="stylesheet" href="../css/site.css">
 <link rel="icon" type="image/png" href="../img/logo.png">
+
+<style>
+details.asset-card {
+  margin: 12px 0;
+  border: 1px solid rgba(0,0,0,.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+details.asset-card summary {
+  padding: 14px 18px;
+  cursor: pointer;
+  font-weight: 600;
+  background: rgba(0,0,0,.02);
+  list-style: none;
+}
+details.asset-card summary::-webkit-details-marker { display: none; }
+details.asset-card summary::before {
+  content: "▶ ";
+  display: inline-block;
+  transition: transform 0.2s;
+}
+details.asset-card[open] summary::before {
+  transform: rotate(90deg);
+}
+details.asset-card .card-content {
+  padding: 0 18px 18px;
+}
+</style>
 </head>
 <body>
 
@@ -119,7 +147,10 @@
   <div class="rule"></div>
   <p class="lead"><i>"Who is this employee?"</i></p>
   <div class="grid">
-    <div class="card">
+    <details class="asset-card">
+<summary>Momo — Store Manager</summary>
+<div class="card-content">
+<div class="card">
       <h3>Momo — Store Manager</h3>
       <p><b>Named role:</b> Store Manager of ZWISERFIT fitness studio, Wanjiang Xincun, Dongguan.</p>
       <p><b>Persistence:</b> Operational daily since March 2026. Not an ad-hoc chatbot — Momo has an ongoing identity, an operational history, and institutional knowledge of the gym's operations.</p>
@@ -138,6 +169,8 @@
       <p><span class="status live">TODAY — operational</span></p>
     </div>
   </div>
+</div>
+</details>
 </section>
 
 <!-- ATTRIBUTE 2: RESPONSIBILITY -->
@@ -146,7 +179,10 @@
   <div class="rule"></div>
   <p class="lead"><i>"What is it responsible for?"</i></p>
   <div class="grid" style="grid-template-columns: 1fr 1fr;">
-    <div class="card">
+    <details class="asset-card">
+<summary>Momo's scope</summary>
+<div class="card-content">
+<div class="card">
       <h3>Momo's scope</h3>
       <ul class="facts">
         <li>Member check-in management</li>
@@ -164,6 +200,8 @@
       <p><span class="status" style="background:#e8f4fd; color:#1a73e8; padding:2px 8px; border-radius:3px; font-size:12px;">NEXT — formal role specifications</span></p>
     </div>
   </div>
+</div>
+</details>
 </section>
 
 <!-- ATTRIBUTE 3: AUTHORITY -->
@@ -172,7 +210,10 @@
   <div class="rule"></div>
   <p class="lead"><i>"What decisions can it make independently?"</i></p>
   <div class="grid" style="grid-template-columns: 1fr 1fr;">
-    <div class="card">
+    <details class="asset-card">
+<summary>Momo's decision scope</summary>
+<div class="card-content">
+<div class="card">
       <h3>Momo's decision scope</h3>
       <ul class="facts">
         <li><b>Independent:</b> Schedule adjustments, routine member communications, operational status updates, equipment maintenance scheduling</li>
@@ -186,6 +227,8 @@
       <p><span class="status" style="background:#e8f4fd; color:#1a73e8; padding:2px 8px; border-radius:3px; font-size:12px;">NEXT — formal authority definitions</span></p>
     </div>
   </div>
+</div>
+</details>
 </section>
 
 <!-- ATTRIBUTE 4: WORKFLOW -->
@@ -194,7 +237,10 @@
   <div class="rule"></div>
   <p class="lead"><i>"What structured sequence of actions does it execute?"</i></p>
   <div class="grid" style="grid-template-columns: 1fr;">
-    <div class="card">
+    <details class="asset-card">
+<summary>Momo's operational cycle</summary>
+<div class="card-content">
+<div class="card">
       <h3>Momo's operational cycle</h3>
       <ul class="facts">
         <li><b>Daily:</b> Member check-ins, schedule management, operational issue resolution, end-of-day status reports</li>
@@ -205,6 +251,8 @@
       <p><span class="status live">TODAY — operational informally</span> · <span class="status" style="background:#e8f4fd; color:#1a73e8; padding:2px 8px; border-radius:3px; font-size:12px;">NEXT — formal workflow documentation</span></p>
     </div>
   </div>
+</div>
+</details>
 </section>
 
 <!-- ATTRIBUTE 5: EXPERIENCE / MEMORY -->
@@ -213,7 +261,10 @@
   <div class="rule"></div>
   <p class="lead"><i>"What experience does it accumulate?"</i></p>
   <div class="grid" style="grid-template-columns: 1fr 1fr;">
-    <div class="card">
+    <details class="asset-card">
+<summary>What Momo accumulates</summary>
+<div class="card-content">
+<div class="card">
       <h3>What Momo accumulates</h3>
       <ul class="facts">
         <li>Member patterns and preferences</li>
@@ -231,6 +282,8 @@
       <p><a href="../experience-protocol/">See Protocol status →</a></p>
     </div>
   </div>
+</div>
+</details>
 </section>
 
 <!-- ATTRIBUTE 6: EVALUATION -->
@@ -239,7 +292,10 @@
   <div class="rule"></div>
   <p class="lead"><i>"How is performance measured?"</i></p>
   <div class="grid" style="grid-template-columns: 1fr 1fr;">
-    <div class="card">
+    <details class="asset-card">
+<summary>What exists today</summary>
+<div class="card-content">
+<div class="card">
       <h3>What exists today</h3>
       <ul class="facts">
         <li>Task completion is tracked (routes succeed or fail)</li>
@@ -260,6 +316,8 @@
       <p><span class="status" style="background:#e8f4fd; color:#1a73e8; padding:2px 8px; border-radius:3px; font-size:12px;">NEXT — formal evaluation frameworks</span></p>
     </div>
   </div>
+</div>
+</details>
   <p style="margin-top:12px; font-size:14px;">We do not claim Momo's performance has been formally evaluated. We claim Momo operates, accumulates Experience, and avoids known errors — which is the foundation evaluation will measure.</p>
 </section>
 
@@ -269,7 +327,10 @@
   <div class="rule"></div>
   <p class="lead"><i>"What happens when it fails? Who is accountable?"</i></p>
   <div class="grid" style="grid-template-columns: 1fr 1fr;">
-    <div class="card">
+    <details class="asset-card">
+<summary>Escalation paths</summary>
+<div class="card-content">
+<div class="card">
       <h3>Escalation paths</h3>
       <ul class="facts">
         <li>Safety incidents → human staff immediately</li>
@@ -286,6 +347,8 @@
       <p><span class="status" style="background:#e8f4fd; color:#1a73e8; padding:2px 8px; border-radius:3px; font-size:12px;">NEXT — formal escalation framework</span></p>
     </div>
   </div>
+</div>
+</details>
 </section>
 
 <!-- HONEST STATUS -->
@@ -308,7 +371,10 @@
     </tbody>
   </table>
   <div class="grid" style="margin-top:16px;">
-    <div class="card">
+    <details class="asset-card">
+<summary>What this proves</summary>
+<div class="card-content">
+<div class="card">
       <h3>What this proves</h3>
       <ul class="facts">
         <li>AI Agents can perform real business functions in a real physical environment</li>
@@ -326,6 +392,8 @@
       </ul>
     </div>
   </div>
+</div>
+</details>
 </section>
 
 <!-- NEXT STEP -->

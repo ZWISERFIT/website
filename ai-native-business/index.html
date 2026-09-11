@@ -7,6 +7,34 @@
 <meta name="description" content="An AI-Native Business is not a business with many Agents. It is a business whose operating system is built around AI from the ground up. ZWISERFIT tests this with a real fitness studio.">
 <link rel="stylesheet" href="../css/site.css">
 <link rel="icon" type="image/png" href="../img/logo.png">
+
+<style>
+details.asset-card {
+  margin: 12px 0;
+  border: 1px solid rgba(0,0,0,.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+details.asset-card summary {
+  padding: 14px 18px;
+  cursor: pointer;
+  font-weight: 600;
+  background: rgba(0,0,0,.02);
+  list-style: none;
+}
+details.asset-card summary::-webkit-details-marker { display: none; }
+details.asset-card summary::before {
+  content: "▶ ";
+  display: inline-block;
+  transition: transform 0.2s;
+}
+details.asset-card[open] summary::before {
+  transform: rotate(90deg);
+}
+details.asset-card .card-content {
+  padding: 0 18px 18px;
+}
+</style>
 </head>
 <body>
 
@@ -118,7 +146,10 @@
   <div class="rule"></div>
   <p class="lead"><i>"Which workflows involve AI? Which are human-only?"</i></p>
   <div class="grid" style="grid-template-columns: 1fr 1fr;">
-    <div class="card">
+    <details class="asset-card">
+<summary>AI-participated workflows</summary>
+<div class="card-content">
+<div class="card">
       <h3>AI-participated workflows</h3>
       <ul class="facts">
         <li>Member management (Momo — check-ins, communication)</li>
@@ -143,6 +174,8 @@
       </ul>
     </div>
   </div>
+</div>
+</details>
   <p style="margin-top:12px; font-size:14px;">The business is not fully AI-operated. Human participation remains essential for strategic, financial, and safety-critical decisions. The AI-native direction is clear; the completion is not.</p>
 </section>
 
@@ -152,7 +185,10 @@
   <div class="rule"></div>
   <p class="lead"><i>"Which decisions does AI make? What is the human override mechanism?"</i></p>
   <div class="grid" style="grid-template-columns: 1fr 1fr;">
-    <div class="card">
+    <details class="asset-card">
+<summary>AI-driven decisions</summary>
+<div class="card-content">
+<div class="card">
       <h3>AI-driven decisions</h3>
       <ul class="facts">
         <li>Model selection per request (LAO routes to optimal provider)</li>
@@ -170,6 +206,8 @@
       <p><span class="status" style="background:#e8f4fd; color:#1a73e8; padding:2px 8px; border-radius:3px; font-size:12px;">NEXT — formal decision matrix</span></p>
     </div>
   </div>
+</div>
+</details>
 </section>
 
 <!-- QUESTION 4 -->
@@ -178,7 +216,10 @@
   <div class="rule"></div>
   <p class="lead"><i>"What triggers human intervention? What is the escalation path?"</i></p>
   <div class="grid" style="grid-template-columns: 1fr;">
-    <div class="card">
+    <details class="asset-card">
+<summary>Escalation triggers</summary>
+<div class="card-content">
+<div class="card">
       <h3>Escalation triggers</h3>
       <ul class="facts">
         <li>Safety incidents — immediate human notification, no AI-only resolution</li>
@@ -192,6 +233,8 @@
       <p><span class="status live">TODAY</span> — operational escalation in practice · <span class="status" style="background:#e8f4fd; color:#1a73e8; padding:2px 8px; border-radius:3px; font-size:12px;">NEXT</span> — formal escalation framework with SLAs</p>
     </div>
   </div>
+</div>
+</details>
 </section>
 
 <!-- QUESTION 5 -->
@@ -200,7 +243,10 @@
   <div class="rule"></div>
   <p class="lead"><i>"What is the feedback loop? Is it operational or merely designed?"</i></p>
   <div class="grid" style="grid-template-columns: 1fr 1fr;">
-    <div class="card">
+    <details class="asset-card">
+<summary>The feedback loop (operational)</summary>
+<div class="card-content">
+<div class="card">
       <h3>The feedback loop (operational)</h3>
       <p>Every LLM route generates operational data through LAO Pipeline B:</p>
       <p style="font-family:monospace; font-size:13px; background:#f5f5f5; padding:8px; border-radius:4px;">
@@ -225,6 +271,8 @@
       <p><span class="status live">TODAY</span> — operational feedback loop (Anchor-based) · <span class="status" style="background:#e8f4fd; color:#1a73e8; padding:2px 8px; border-radius:3px; font-size:12px;">NEXT</span> — formal evaluation and Protocol integration</p>
     </div>
   </div>
+</div>
+</details>
   <p style="margin-top:12px; font-size:14px;">The feedback loop is real and operational. It is not yet measured against formal reliability metrics. The mechanism works; the measurement is NEXT.</p>
 </section>
 
@@ -248,7 +296,10 @@
   <div class="rule"></div>
   <p class="lead">An AI-Native Business in a simulation is a demonstration. An AI-Native Business in physical reality is a verification scenario.</p>
   <div class="grid" style="grid-template-columns: 1fr 1fr;">
-    <div class="card">
+    <details class="asset-card">
+<summary>What physical reality provides</summary>
+<div class="card-content">
+<div class="card">
       <h3>What physical reality provides</h3>
       <ul class="facts">
         <li>Real members with real expectations</li>
@@ -268,6 +319,8 @@
       <p>The path from real operations to valuable Experience requires: provenance, verification, authorization, and evaluation. Each step must be built, not assumed.</p>
     </div>
   </div>
+</div>
+</details>
 </section>
 
 <!-- HONEST STATUS -->
@@ -291,7 +344,10 @@
     </tbody>
   </table>
   <div class="grid" style="margin-top:16px;">
-    <div class="card">
+    <details class="asset-card">
+<summary>What this proves</summary>
+<div class="card-content">
+<div class="card">
       <h3>What this proves</h3>
       <ul class="facts">
         <li>AI Agents can operate a real physical business</li>
@@ -310,6 +366,8 @@
       </ul>
     </div>
   </div>
+</div>
+</details>
 </section>
 
 <!-- LONG-TERM VISION -->

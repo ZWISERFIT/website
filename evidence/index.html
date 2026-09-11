@@ -7,6 +7,34 @@
 <meta name="description" content="LAO publishes no figure without a source. Cost numbers appear only after reconciliation against the official provider console. Real incidents, real numbers, real receipts across 5 categories.">
 <link rel="stylesheet" href="../css/site.css">
 <link rel="icon" type="image/png" href="../img/logo.png">
+
+<style>
+details.asset-card {
+  margin: 12px 0;
+  border: 1px solid rgba(0,0,0,.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+details.asset-card summary {
+  padding: 14px 18px;
+  cursor: pointer;
+  font-weight: 600;
+  background: rgba(0,0,0,.02);
+  list-style: none;
+}
+details.asset-card summary::-webkit-details-marker { display: none; }
+details.asset-card summary::before {
+  content: "▶ ";
+  display: inline-block;
+  transition: transform 0.2s;
+}
+details.asset-card[open] summary::before {
+  transform: rotate(90deg);
+}
+details.asset-card .card-content {
+  padding: 0 18px 18px;
+}
+</style>
 </head>
 <body>
 
@@ -169,7 +197,10 @@
   <div class="rule"></div>
   <p class="lead">Token consumption data from real LAO operations. All cost figures wait for official provider reconciliation before being presented as verified.</p>
   <div class="grid">
-    <div class="card">
+    <details class="asset-card">
+<summary>Cache performance</summary>
+<div class="card-content">
+<div class="card">
       <h3>Cache performance</h3>
       <p>Cache hit rate: <b>91.3%</b> <span class="measured-badge">measured · pending official reconciliation</span></p>
       <p>Cache-miss requests: <b>8.5%</b> of token volume but <b>56%</b> of cost <span class="measured-badge">measured · pending official reconciliation</span></p>
@@ -182,6 +213,8 @@
       <p>Until reconciliation completes, all cost figures carry the <span class="measured-badge">measured · pending official reconciliation</span> badge.</p>
     </div>
   </div>
+</div>
+</details>
 </section>
 
 <!-- CATEGORY 3: PRODUCTION -->
@@ -190,7 +223,10 @@
   <div class="rule"></div>
   <p class="lead">9 AI Agents operating a real fitness business since March 2026. This is not a demo environment — it is a real gym with real members, real money, and real consequences.</p>
   <div class="grid">
-    <div class="card">
+    <details class="asset-card">
+<summary>Operating history</summary>
+<div class="card-content">
+<div class="card">
       <h3>Operating history</h3>
       <ul class="facts">
         <li>9 Agents deployed across store management, data analysis, operations</li>
@@ -212,6 +248,8 @@
       <p><span class="status" style="background:#e8f4fd; color:#1a73e8; padding:2px 8px; border-radius:3px; font-size:12px;">NEXT — formal Digital Employee role definitions in progress</span></p>
     </div>
   </div>
+</div>
+</details>
 </section>
 
 <!-- CATEGORY 4: OPEN SOURCE -->
@@ -220,7 +258,10 @@
   <div class="rule"></div>
   <p class="lead">Outside voices became real changes. All verifiable in public repositories.</p>
   <div class="grid">
-    <div class="card">
+    <details class="asset-card">
+<summary>Community engagement</summary>
+<div class="card-content">
+<div class="card">
       <h3>Community engagement</h3>
       <ul class="facts">
         <li>6 external contributors across the organization</li>
@@ -239,6 +280,8 @@
       <p><a href="../trust/">Read the full stories →</a></p>
     </div>
   </div>
+</div>
+</details>
 </section>
 
 <!-- CATEGORY 5: PHYSICAL WORLD -->
@@ -247,7 +290,10 @@
   <div class="rule"></div>
   <p class="lead">The system meets reality in a real fitness studio. Not a simulation. Not a sandbox. A real business with real members and real consequences.</p>
   <div class="grid">
-    <div class="card">
+    <details class="asset-card">
+<summary>The gym</summary>
+<div class="card-content">
+<div class="card">
       <h3>The gym</h3>
       <ul class="facts">
         <li>800sqm physical fitness studio, Wanjiang Xincun, Dongguan</li>
@@ -264,6 +310,8 @@
       <p><b>What this does not prove:</b> That behavioral data automatically becomes behavioral assets. That requires provenance, verification, rights, authorization, and user control — conditions that are being designed, not yet operational.</p>
     </div>
   </div>
+</div>
+</details>
 </section>
 
 <!-- VERIFY IT YOURSELF -->
@@ -272,7 +320,10 @@
   <div class="rule"></div>
   <p class="lead">You should not trust us. You should verify. Here are three concrete ways to do that &mdash; each one independent of the others.</p>
   <div class="grid">
-    <div class="card">
+    <details class="asset-card">
+<summary>1. Read the code</summary>
+<div class="card-content">
+<div class="card">
       <h3>1. Read the code</h3>
       <p>LAO is Apache 2.0. Every claim on this site traces to code you can read, fork, and run yourself.</p>
       <p><a href="https://github.com/ZWISERFIT/lao" target="_blank" rel="noopener">GitHub repository &rarr;</a></p>
@@ -288,6 +339,8 @@
       <p><a href="../reliable-agent/">See the test evidence &rarr;</a></p>
     </div>
   </div>
+</div>
+</details>
   <p style="margin-top:18px; text-align:center;">
     <a class="btn" href="../lao/">Install LAO &rarr;</a>
     <a class="btn" style="margin-left:10px;" href="https://github.com/ZWISERFIT/lao" target="_blank" rel="noopener">Read the code &rarr;</a>
